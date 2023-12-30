@@ -1,0 +1,39 @@
+.content img {
+    max-width: 100%;
+    height: auto;
+    display: block;
+    margin: 0 auto;
+  }
+  
+  /* Contact Us Page Styles */
+  
+  .content form {
+    max-width: 600px;
+    margin: 0 auto;
+  }
+  
+  .content input, 
+  .content textarea {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 20px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+  }
+  
+  .content textarea {
+    height: 150px;
+  }
+  
+  .content button[type="submit"] {
+    background-color: #043C2C;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+  }
+  
+  .content button[type="submit"]:hover {
+    background-color: #568a6e;
+  }
