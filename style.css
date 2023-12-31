@@ -30,7 +30,7 @@ h4{
     overflow: auto;
     box-shadow: var(--box-shadow);
     display: flex;
-    transition: all 0.3s ease;
+    transition: all 0.3s ease-in-out;
 }
 
 .topnav:hover{
@@ -89,7 +89,6 @@ label:active:after{
     width: 26px;
 }
 
-
 ul{
 	width: max-content;
 	margin: auto;
@@ -102,11 +101,6 @@ ul li{
     line-height: 21px;
     color: #568a6e;
     cursor: pointer;
-    transition: transform 0.3s ease;
-}
-
-ul li:hover{
-    transform: translateY(-5px);
 }
 
 ul li a{
@@ -114,11 +108,12 @@ ul li a{
     padding: 8px 25px;
     color: #568a6e;
     text-decoration: none;
+    transition: transform 0.3s ease;
 }
 
 ul li a:hover{
     color: #318351;
-    transform: translateY(-5px);
+    transform: translateY(0px);
 }
 
 #logo{
@@ -133,8 +128,9 @@ ul li a:hover{
 .topnav a.active{
     background-color: #2F523D;
     opacity: 0.8;
-    color: #568a6e;
+    color: white;
     border-radius: 20px;
+
 }
 
 .lang{
