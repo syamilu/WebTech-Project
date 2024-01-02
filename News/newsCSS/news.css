@@ -1,0 +1,127 @@
+
+:root{
+    --primary-color: #043C2C;
+    --secondary-color: #568a6e;
+    --color-light: rgba(0, 0, 0, 0.18);
+    --box-shadow: 0 2rem 3rem var(--color-light);
+    }
+
+body{
+  align-items: center;
+}
+
+.subtopnav {
+  overflow: hidden;
+  background-color: #2b503c5c;
+  transition: all 0s ease-in-out;
+}
+
+.subtopnav .navcontent li a{
+    text-align: center;
+    color: rgb(190, 188, 188);
+    transition: transform 0.3s ease-in-out;
+}
+
+.subtopnav .navcontent li a:hover{
+    color:  #dbede3;
+    transform: translateY(0px);
+}
+
+.subtopnav .navcontent li a.active{
+    color: #dbede3;
+}
+
+.subtopnav .navcontent li a.active span {
+    display: inline-block;
+    border-bottom: 2px solid  #dbede3;
+    padding-bottom: 3px;
+  }
+
+
+.news-container{
+  padding-left: 1.5rem;
+  padding-right: 1.5rem; 
+  padding-top: 4rem; 
+  padding-bottom: 5rem; 
+  background-color: #F9FAFB; 
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+
+.content{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+#news-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  max-width: 90%;
+  margin-block: 2rem;
+  gap: 2rem;
+}
+
+img {
+  max-width: 100%;
+  display: block;
+  object-fit: cover;
+}
+
+.card {
+  display: flex;
+  flex-direction: column;
+  width: clamp(20rem, calc(20rem + 2vw), 22rem);
+  height: clamp(40rem, calc(20rem + 2vw), 22rem);
+  overflow: hidden;
+  box-shadow: 0 .1rem 1rem rgba(0, 0, 0, 0.1);
+  border-radius: 1em;
+  background: #2b503c5c;
+  margin-right: 25px;
+  margin-left: 25px;
+  box-shadow: 3px 5px 10px rgba(29, 29, 29, 0.911);
+}
+
+.card:hover {
+  transform: translateY(-.5rem);
+  box-shadow: 0 .5rem 2rem rgba(0, 0, 0, 0.2);
+}
+
+.card__body {
+  padding: 1rem;
+  display: flex;
+  flex-direction: column;
+  gap: .5rem;
+}
+
+
+.tag {
+  align-self: flex-start;
+  padding: .25em .75em;
+  border-radius: 1em;
+  font-size: .75rem;
+}
+
+.tag + .tag {
+  margin-left: .5em;
+}
+
+.card__body h4 {
+  font-size: 1.5rem;
+  text-transform: capitalize;
+}
+
+.card__footer {
+  display: flex;
+  padding: 1rem;
+  margin-top: auto;
+}
