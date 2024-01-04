@@ -8,8 +8,7 @@
     <!-- (Page) | Mahallah Salahuddin-->
     <title>Mahallah Salahuddin</title>
     <link rel="stylesheet" href="/style.css" />
-    <link rel="stylesheet" href="/News/newsCSS/news.css" />
-    <link rel="stylesheet" href="/News/community/communityCSS/community.css" />
+    <link rel="stylesheet" href="/News/whatsnew/newsCSS/news.css" />
 </head>
 
 <body>
@@ -19,7 +18,7 @@
         </span>
     </button>
     <div class="topnav">
-        <img id="logo" src="/asset/logo-salahuddin.pngg" alt="logo" width="60" height="60">
+        <img id="logo" src="/asset/logo-salahuddin.png" alt="logo" width="60" height="60">
         <ul>
             <!--Put class="active" according to your working directory and also link to other pages <../(page)>-->
             <li><a href="/index.html">Home</a></li>
@@ -36,25 +35,16 @@
     </div>
     <div class="subtopnav">
         <ul class="navcontent">
-            <li><a href="/News/news.html"><span>News</span></a></li>
-            <li><a href="/News/community/community.html" class="active"><span>Community Forum</span></a></li>
+            <li><a href="/News/whatsnew/news.html" class="active"><span>News</span></a></li>
+            <li><a href="/News/community/community.html">Community Forum</a></li>
         </ul>
     </div>
     <div class="content">
         <!--Refer Figma for the welcome texts according to your pages-->
-        <h4>Assalamualaikum w.b.t, Welcome to Mahallah Salahuddin</h4>
-        <div id="wrapper">
-            <div id="menu">
-                <p class="welcome">Welcome, this is Appcode's Live Chat Tutorial<b></b></p>
-                <p class="logout"><a id="exit" href="#">Exit Chat</a></p>
-            </div>
-            <div id="chatbox"></div>
-            <form name="message" action="">
-                <input name="usermsg" type="text" id="usermsg" />
-                <input name="submitmsg" type="submit" id="submitmsg" value="Send" />
-            </form>
-        </div>
+        <h4>“O you who believe! Keep your duty to God and fear Him, and speak (always) the truth.” (33:70)</h4>
+        <div id="news-container"></div>
     </div>
+    <script src="/News/whatsnew/newsJS/index.js"></script>
 </body>
 
 </html>
