@@ -19,8 +19,12 @@
       color: #dbede3;
   }
   
+  .subtopnav .navcontent li a span {
+    display: inline-block;
+    border-bottom: 2px solid transparent;  /* Add this line */
+    padding-bottom: 3px;
+  }
+  
   .subtopnav .navcontent li a.active span {
-      display: inline-block;
-      border-bottom: 2px solid  #dbede3;
-      padding-bottom: 3px;
-    }
+    border-bottom-color: #dbede3;  /* Change this line */
+  }
