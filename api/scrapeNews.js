@@ -2,7 +2,7 @@ const puppeteer = require("puppeteer");
 const express = require("express");
 const cors = require("cors");
 const app = express();
-const port = 5500;
+const port = 3000;
 
 app.use(cors());
 
@@ -30,11 +30,11 @@ async function scrapeNews(url) {
   return allNews;
 }
 
-app.get("", async (req, res) => {
+app.get("/api", async (req, res) => {
   const news = await scrapeNews("https://news.iium.edu.my/?cat=4");
   res.json(news);
 });
 
 app.listen(port, () => {
-  console.log(`Server running at https://v3.salahuddin.syamilyusof.com/api/`);
+  console.log(`Server running at https://v3.salahuddin.syamilyusof.com`);
 });
