@@ -8,8 +8,8 @@
     ],
     "routes": [
       {
-        "src": "/api/(.*)",
-        "dest": "/scrapeNews.js"
+        "src": "/api",
+        "dest": "/api/scrapeNews.js"
       }
     ]
   }
