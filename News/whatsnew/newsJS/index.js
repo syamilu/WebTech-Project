@@ -11,7 +11,7 @@ if (cachedNews && cacheTime && currentTime - cacheTime < expiryTime) {
   displayNews(news);
 } else {
   // If the news data is not in localStorage or it's expired, fetch it
-  fetch("http://localhost:3000/news")
+  fetch("http://localhost:3000/api")
     .then((response) => response.json())
     .then((news) => {
       // Store the news data and the current time in localStorage
