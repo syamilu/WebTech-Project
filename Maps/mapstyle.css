@@ -1,0 +1,11 @@
+#map {
+    width: 100%;
+    height: 60vh;
+  }
+
+
+  #map {
+    border: 5px solid #043C2C;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0,0,0,0.2);
+  }
