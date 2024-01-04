@@ -36,5 +36,5 @@ app.get("", async (req, res) => {
 });
 
 app.listen(port, () => {
-  console.log(`Server running at https://v2.salahuddin.syamilyusof.com/api/`);
+  console.log(`Server running at https://v3.salahuddin.syamilyusof.com/api/`);
 });
