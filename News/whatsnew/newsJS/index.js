@@ -11,7 +11,7 @@ if (cachedNews && cacheTime && currentTime - cacheTime < expiryTime) {
   displayNews(news);
 } else {
   // If the news data is not in localStorage or it's expired, fetch it
-  fetch("https://v2.salahuddin.syamilyusof.com/api/scrapeNews")
+  fetch("https://v3.salahuddin.syamilyusof.com/api/scrapeNews")
     .then((response) => response.json())
     .then((news) => {
       // Store the news data and the current time in localStorage
