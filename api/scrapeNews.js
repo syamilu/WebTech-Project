@@ -1,13 +1,13 @@
-const chromium = require("chrome-aws-lambda");
+const puppeteer = require("puppeteer");
+const express = require("express");
+const cors = require("cors");
+const app = express();
+const port = 3000;
 
-module.exports = async (req, res) => {
-  const url = "https://news.iium.edu.my/?cat=4";
-  const browser = await chromium.puppeteer.launch({
-    args: chromium.args,
-    defaultViewport: chromium.defaultViewport,
-    executablePath: await chromium.executablePath,
-    headless: chromium.headless,
-  });
+app.use(cors());
+
+async function scrapeNews(url) {
+  const browser = await puppeteer.launch();
   const page = await browser.newPage();
   await page.goto(url);
 
@@ -27,5 +27,14 @@ module.exports = async (req, res) => {
       });
   });
 
-  res.json(allNews);
-};
+  return allNews;
+}
+
+app.get("/api", async (req, res) => {
+  const news = await scrapeNews("https://news.iium.edu.my/?cat=4");
+  res.json(news);
+});
+
+app.listen(port, () => {
+  console.log(`Server running at http://localhost:${port}`);
+});
