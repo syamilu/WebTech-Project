@@ -7,8 +7,8 @@
     <!--Change the title according to this format:-->
     <!-- (Page) | Mahallah Salahuddin-->
     <title>Mahallah Salahuddin</title>
-    <link rel="stylesheet" href="../style.css">
-    </link>
+    <link rel="stylesheet" href="/style.css">
+    <link rel="stylesheet" href="/template/subnav.css">
 </head>
 
 <body>
@@ -21,26 +21,27 @@
         <img id="logo" src="../logo-salahuddin.png" alt="logo" width="60" height="60">
         <ul>
             <!--Put class="active" according to your working directory and also link to other pages <../(page)>-->
-            <li><a href="/index.html">Home</a></li>
-            <li><a href="/News/whatsnew/news.html">News</a></li>
-            <li><a href="/Facilities/facilities1.html">Facilities</a></li>
+            <li><a href="/home.html">Home</a></li>
+            <li><a href="/News/news.html">News</a></li>
+            <li><a href="/Facilities/facilities.html">Facilities</a></li>
             <li><a href="/Maps/maps.html">Maps</a></li>
             <li><a href="/Contact/contact.html">Contacts</a></li>
-            <li><a href="/About/about.html">About</a></li>
+            <li><a href="/About/about.html" class="active">About</a></li>
         </ul>
         <div class="darkmode-toggle">
             <input type="checkbox" id="darkmode-toggle" />
             <label for="darkmode-toggle"></label>
         </div>
     </div>
+    <div class="subtopnav">
+        <ul class="navcontent">
+            <li><a href="/About/about.html"><span>Principal's Message</span></a></li>
+            <li><a href="/About/ImportantThings.html" class="active">Principal's Message</a></li>
+        </ul>
+    </div>
     <div class="content">
         <!--Refer Figma for the welcome texts according to your pages-->
         <h4>Assalamualaikum w.b.t, Welcome to Mahallah Salahuddin</h4>
-        <iframe
-            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3493.6465370369074!2d101.73807951188952!3d3.256590171674144!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x31cc38c5049b50b1%3A0x2fa51a46b8f14aab!2sMahallah%20Salahuddin%20al-Ayyubi!5e0!3m2!1sen!2smy!4v1698908291483!5m2!1sen!2smy"
-            width="800" height="600" style="border:0;" allowfullscreen="" loading="lazy" scrollwheel="true"
-            allow="zoom; fullscreen" width="800" height="600" referrerpolicy="no-referrer-when-downgrade">
-        </iframe>
     </div>
 </body>
 
