@@ -17,6 +17,11 @@ body{
     font-family: 'Poppins', sans-serif;
 }
 
+body.dark-mode {
+    background-color: #242424;
+    color: #ebebeb;
+}
+
 h4{
     margin-top: 30px;
     text-align: center;
