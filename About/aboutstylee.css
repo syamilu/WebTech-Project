@@ -19,7 +19,7 @@ p:hover{
   line-height: 2;}
 
 
-/*
+
   .wrapper{
     width: 15rem;
     height: 15rem;
@@ -31,10 +31,13 @@ p:hover{
   height: 100%;
   object-fit: cover;
   transition: transform 400ms;
+  display: block;
+  width: 100%;
+  height: auto;
 }
 .wrapper :hover img{
   transform: scale(1.2S);
-}*/
+}
 
 #mav{
 columns: 240px 2;
