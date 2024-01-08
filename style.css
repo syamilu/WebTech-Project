@@ -188,23 +188,23 @@ ul li a:hover{
 
 /* for dark mode */
 body.dark-mode {
-    background-color: #142d1f;
+    background-color: #003823;
     color: #ebebeb;
 }
 
 .topnav.dark-mode{
-    background-color: #070F0A;
+    background-color: #00241a;
     color: #ebebeb;
     box-shadow: none;
 }
 
 #report-form.dark-mode {
-    background: #070F0A;
+    background: #2a6b48;
     box-shadow: 4px -7px 8px 1px rgba(0, 0, 0, 0.25) inset;
 }
 
 .topnav a.active.dark-mode{
-    background-color: #142d1f;
+    background-color: #424c46b4;
     opacity: 0.8;
     color: white;
     margin: 0.5px;
