@@ -1,0 +1,47 @@
+
+
+  .card{
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 40px;
+
+  }
+  #ch{
+    display: none;
+
+
+}
+  #ch:checked ~ .content{
+    display: block;
+  }
+.content{
+    display: none;
+}
+
+
+  label{
+display: inline-block;
+cursor:pointer;
+color: #080808;
+background-color: rgb(5, 99, 50);
+padding: 3px 13px;
+border-radius: 3px;
+margin-top: 12px;
+  }
+
+
+
+  .gallery {
+    display: flex;
+    flex-wrap: nowrap;  
+    overflow-x: auto;
+    justify-content: center;
+  }
+  
+  .gallery img {
+    flex: 0 0 auto;
+    width: 500px; 
+    height: 400px;
+    object-fit: cover;
+    margin-right: 10px;
+  }
