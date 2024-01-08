@@ -24,16 +24,26 @@
 
 
 
+  .box-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+
   .box {
     background-color: #b8c5b8;
     padding: 20px;
-    margin-bottom: 20px;  
+    margin: 20px;  
+    max-width: 1500px;
     box-shadow: 0 1px 3px #aec2ab;
     padding-top: 10px;
     padding-right: 15px;
     padding-bottom: 10px;
     padding-left: 15px;
   }
+
   
   .gallery {
     display: flex;
