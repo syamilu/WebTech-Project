@@ -52,15 +52,8 @@
 // app.listen(3000, () => console.log("Server started on port 3000"));
 
 // api/message/postChat.js
-const mongoose = require("mongoose");
-const cors = require("cors"); // Add this line
-const bodyParser = require("body-parser");
-const cookieParser = require("cookie-parser");
-
-// Connect to MongoDB
-const url =
-  "mongodb+srv://syamilu:asdfasdf@webtech01.yxq2azw.mongodb.net/webtech01?retryWrites=true&w=majority";
-mongoose.connect(url);
+import connectMongo from "../../db/connectMongo";
+await connectMongo();
 
 // Define a schema
 const MessageSchema = new mongoose.Schema({

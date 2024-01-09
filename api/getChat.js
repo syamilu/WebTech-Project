@@ -1,20 +1,11 @@
-const express = require("express");
-const { MongoClient } = require("mongodb");
-const cors = require("cors");
-const app = express();
-
-app.use(cors());
-
-const url =
-  "mongodb+srv://syamilu:asdfasdf@webtech01.yxq2azw.mongodb.net/?retryWrites=true&w=majority";
-const client = new MongoClient(url);
+import connectMongo from "../db/connectMongo";
 
 let collection;
 
 async function getChat() {
   try {
     if (!collection) {
-      await client.connect();
+      await connectMongo();
       const database = client.db("webtech01");
       collection = database.collection("messages");
       await collection.createIndex({ timestamp: 1 });
