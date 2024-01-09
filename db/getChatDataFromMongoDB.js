@@ -15,7 +15,6 @@ async function getChatDataFromMongoDB() {
 
     const chatData = await collection
       .find({ timestamp: { $gte: today } })
-      .sort({ timestamp: 1 })
       .toArray();
 
     return chatData;
