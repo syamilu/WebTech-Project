@@ -109,11 +109,13 @@ ul li a{
     color: #568a6e;
     text-decoration: none;
     transition: transform 0.3s ease;
+    border-radius: 20px; /* Add this line */
 }
 
 ul li a:hover{
     color: #318351;
-    transform: translateY(0px);
+    transform: translateY(1px);
+    
 }
 
 #logo{
@@ -125,12 +127,18 @@ ul li a:hover{
     width: auto;
 }
 
+.topnav a {
+    border-radius: 20px;
+    background-color: transparent;
+    padding: 8px 25px; /* Add this line */
+}
+
+
 .topnav a.active{
     background-color: #2F523D;
     opacity: 0.8;
     color: white;
-    border-radius: 20px;
-
+    margin: 0.5px;
 }
 
 .lang{
@@ -177,6 +185,30 @@ ul li a:hover{
     box-shadow: 0 0 10px rgb(255, 255, 255, 0.5);
 }
 
+
+/* for dark mode */
+body.dark-mode {
+    background-color: #003823;
+    color: #ebebeb;
+}
+
+.topnav.dark-mode{
+    background-color: #002219;
+    color: #ebebeb;
+    box-shadow: none;
+}
+
+#report-form.dark-mode {
+    background: #2a6b48;
+    box-shadow: 4px -7px 8px 1px rgba(0, 0, 0, 0.25) inset;
+}
+
+.topnav a.active.dark-mode{
+    background-color: #424c46b4;
+    opacity: 0.8;
+    color: white;
+    margin: 0.5px;
+}
 #form-container {
     position: absolute;
     justify-content: center;

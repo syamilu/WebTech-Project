@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!--Change the title according to this format:-->
+    <!-- (Page) | Mahallah Salahuddin-->
+    <title>Mahallah Salahuddin</title>
+    <link rel="stylesheet" href="/style.css" />
+    <link rel="stylesheet" href="/News/whatsnew/newsCSS/news.css" />
+    <link rel="stylesheet" href="/template/subnav.css" />
+</head>
+
+<body>
+    <button onclick="" id="report-form" title="Maintenance Report">
+        <span>
+            Maintenance<br>Report
+        </span>
+    </button>
+    <div class="topnav">
+        <img id="logo" src="/asset/logo-salahuddin.png" alt="logo" width="60" height="60">
+        <ul>
+            <!--Put class="active" according to your working directory and also link to other pages <../(page)>-->
+            <li><a href="/index.html">Home</a></li>
+            <li><a href="/News/news.html" class="active">News</a></li>
+            <li><a href="/Facilities/facilities1.html">Facilities</a></li>
+            <li><a href="/Maps/maps.html">Maps</a></li>
+            <li><a href="/Contact/contact.html">Contacts</a></li>
+            <li><a href="/About/about.html">About</a></li>
+        </ul>
+        <div class="darkmode-toggle">
+            <input type="checkbox" id="darkmode-toggle" />
+            <label for="darkmode-toggle"></label>
+        </div>
+    </div>
+    <div class="subtopnav">
+        <ul class="navcontent">
+            <li><a href="/News/whatsnew/news.html" class="active"><span>News</span></a></li>
+            <li><a href="/News/community/community.html">Community Forum</a></li>
+        </ul>
+    </div>
+    <div class="content">
+        <!--Refer Figma for the welcome texts according to your pages-->
+        <h4>“O you who believe! Keep your duty to God and fear Him, and speak (always) the truth.” (33:70)</h4>
+        <div id="news-container"></div>
+    </div>
+    <script src="/News/whatsnew/newsJS/index.js"></script>
+    <script src="/darkmode.js"></script>
+</body>
+
+</html>
