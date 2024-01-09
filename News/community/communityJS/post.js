@@ -1,5 +1,5 @@
 document
-  .querySelector('form[name="message"]')
+  .getElementById("message-form")
   .addEventListener("submit", function (event) {
     // Prevent the form from being submitted normally
     event.preventDefault();
@@ -8,12 +8,14 @@ document
     var usermsg = document.querySelector('input[name="usermsg"]').value;
 
     // Send a POST request to the server
-    fetch("http://localhost:3000/message", {
+    fetch("/api/message/postChat", {
       method: "POST",
+      credentials: "include",
       headers: {
         "Content-Type": "application/json",
       },
       body: JSON.stringify({
+        username: getCookie("username"),
         usermsg: usermsg,
       }),
     })

@@ -90,7 +90,7 @@
                 <!-- Must set to the bottom -->
             </div>
             <div id="chatbox-input">
-                <form name="message" action="http://localhost:3000/message" method="POST">
+                <form id="message-form">
                     <input name="usermsg" type="text" id="usermsg" />
                     <input name="submitmsg" type="submit" id="submitmsg" value="Send" />
                 </form>
@@ -98,7 +98,8 @@
         </div>
 
         <script src="/darkmode.js"></script>
-        <script src="/News/community/communityJS/submit.js"></script>
+        <script src="https://cdn.jsdelivr.net/npm/js-cookie@2/src/js.cookie.min.js"></script>
+        <script src="/News/community/communityJS/post.js"></script>
         <script src="/News/community/communityJS/cookie.js"></script>
         <script src="/News/community/communityJS/client.js"></script>
 </body>

@@ -8,7 +8,7 @@ async function getChatDataFromMongoDB() {
   try {
     await client.connect();
     const database = client.db("webtech01");
-    const collection = database.collection("chat");
+    const collection = database.collection("messages");
 
     const today = new Date();
     today.setHours(0, 0, 0, 0);
