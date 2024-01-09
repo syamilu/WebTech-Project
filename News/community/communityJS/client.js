@@ -1,5 +1,5 @@
 document.addEventListener("DOMContentLoaded", function () {
-  fetch("/api/message/getChat")
+  fetch("/api/getChat")
     .then((response) => response.json())
     .then((data) => {
       data.forEach((chat) => {
