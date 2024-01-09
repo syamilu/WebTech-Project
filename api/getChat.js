@@ -1,5 +1,9 @@
-require("dotenv").config();
+const express = require("express");
 const { MongoClient } = require("mongodb");
+const cors = require("cors");
+const app = express();
+
+app.use(cors());
 
 const url =
   "mongodb+srv://syamilu:asdfasdf@webtech01.yxq2azw.mongodb.net/?retryWrites=true&w=majority";
@@ -13,6 +17,7 @@ async function getChat() {
       await client.connect();
       const database = client.db("webtech01");
       collection = database.collection("messages");
+      await collection.createIndex({ timestamp: 1 });
     }
 
     const today = new Date();

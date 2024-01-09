@@ -1,11 +1,14 @@
-document.addEventListener("DOMContentLoaded", function () {
-  fetch("/api/getChat")
-    .then((response) => response.json())
-    .then((data) => {
-      data.forEach((chat) => {
-        let chatbox = document.getElementById("chatbox");
-        let chatDiv = document.createElement("div");
-        chatDiv.innerHTML = `
+document.addEventListener("DOMContentLoaded", async function () {
+  try {
+    const response = await fetch("/api/getChat");
+    if (!response.ok) {
+      throw new Error(`HTTP error! status: ${response.status}`);
+    }
+    const data = await response.json();
+    data.forEach((chat) => {
+      let chatbox = document.getElementById("chatbox");
+      let chatDiv = document.createElement("div");
+      chatDiv.innerHTML = `
             <div class="${
               chat.username === getCookie("username")
                 ? "chatbox-send-container"
@@ -26,7 +29,9 @@ document.addEventListener("DOMContentLoaded", function () {
               </div>
             </div>
           `;
-        chatbox.appendChild(chatDiv);
-      });
+      chatbox.appendChild(chatDiv);
     });
+  } catch (err) {
+    console.error(err);
+  }
 });
