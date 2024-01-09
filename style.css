@@ -15,6 +15,7 @@ body{
     text-align: center;
     height: 1000px;
     font-family: 'Poppins', sans-serif;
+   
 }
 
 h4{
@@ -184,3 +185,6 @@ ul li a:hover{
     color: white;
     box-shadow: 0 0 10px rgb(255, 255, 255, 0.5);
 }
+.text p {
+    margin-bottom: 50px; /* You can adjust the value based on your preference */
+  }
