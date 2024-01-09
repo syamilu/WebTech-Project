@@ -45,7 +45,7 @@
     transition: background-color 0.3s ease;
   }
 
-  form {
+  form.contact-form {
     background-color: #054b01;
     padding: 40px;
     border-radius: 10px;

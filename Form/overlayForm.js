@@ -1,6 +1,6 @@
 let fetchedHTML = null;
 
-fetch("Form/forms.html")
+fetch("/Form/forms.html")
   .then((response) => response.text())
   .then((data) => {
     fetchedHTML = data;
