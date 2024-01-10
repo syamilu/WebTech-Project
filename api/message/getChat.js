@@ -1,4 +1,4 @@
-import connectMongo from "../../db/connectMongo";
+const MongoClient = require("mongodb").MongoClient;
 const express = require("express");
 const cors = require("cors");
 const app = express();
@@ -6,10 +6,14 @@ const app = express();
 app.use(cors());
 let collection;
 
+const url =
+  "mongodb+srv://syamilu:asdfasdf@webtech01.yxq2azw.mongodb.net/?retryWrites=true&w=majority";
+const client = new MongoClient(url);
+
 async function getChat() {
   try {
     if (!collection) {
-      await connectMongo();
+      await client.connect();
       const database = client.db("webtech01");
       collection = database.collection("messages");
       await collection.createIndex({ timestamp: 1 });
@@ -29,16 +33,21 @@ async function getChat() {
   }
 }
 
-module.exports = async (req, res) => {
-  try {
-    const chatData = await getChat();
-    res.json(chatData);
-  } catch (err) {
-    res
-      .status(500)
-      .json({ error: "An error occurred while fetching chat data" });
-  }
-};
+app.get("/message/getChat", async (req, res) => {
+  const chatData = await getChat();
+  res.json(chatData);
+});
+
+// module.exports = async (req, res) => {
+//   try {
+//     const chatData = await getChat();
+//     res.json(chatData);
+//   } catch (err) {
+//     res
+//       .status(500)
+//       .json({ error: "An error occurred while fetching chat data" });
+//   }
+// };
 
 // // const express = require("express");
 // // const app = express();
