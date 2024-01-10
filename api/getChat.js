@@ -1,16 +1,13 @@
-const MongoClient = require("mongodb").MongoClient;
-const express = require("express");
-const cors = require("cors");
-const app = express();
+// api/getChat.js
+const { MongoClient } = require("mongodb");
 
-app.use(cors());
 let collection;
 
 const url =
   "mongodb+srv://syamilu:asdfasdf@webtech01.yxq2azw.mongodb.net/?retryWrites=true&w=majority";
 const client = new MongoClient(url);
 
-async function getChat() {
+module.exports = async (req, res) => {
   try {
     if (!collection) {
       await client.connect();
@@ -26,17 +23,14 @@ async function getChat() {
       .find({ timestamp: { $gte: today } })
       .toArray();
 
-    return chatData;
+    res.status(200).json(chatData);
   } catch (err) {
     console.error(err);
-    throw err;
+    res
+      .status(500)
+      .json({ error: "An error occurred while fetching chat data" });
   }
-}
-
-app.get("/message/getChat", async (req, res) => {
-  const chatData = await getChat();
-  res.json(chatData);
-});
+};
 
 // module.exports = async (req, res) => {
 //   try {
