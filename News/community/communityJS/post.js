@@ -8,7 +8,7 @@ document
     var usermsg = document.querySelector('input[name="usermsg"]').value;
 
     // Send a POST request to the server
-    fetch("/api/message/postChat", {
+    fetch("/api/postChat", {
       method: "POST",
       credentials: "include",
       headers: {
@@ -24,4 +24,6 @@ document
       .catch((error) => {
         console.error("Error:", error);
       });
+
+    document.getElementById("usermsg").value = "";
   });
