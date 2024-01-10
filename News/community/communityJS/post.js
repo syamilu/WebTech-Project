@@ -24,4 +24,6 @@ document
       .catch((error) => {
         console.error("Error:", error);
       });
+
+    document.getElementById("usermsg").value = "";
   });
