@@ -1,6 +1,6 @@
 document.addEventListener("DOMContentLoaded", async function () {
   try {
-    const response = await fetch("/api/getChat");
+    const response = await fetch("/api/message/getChat");
     if (!response.ok) {
       throw new Error(`HTTP error! status: ${response.status}`);
     }

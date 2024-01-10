@@ -1,5 +1,9 @@
-import connectMongo from "../db/connectMongo";
+import connectMongo from "../../db/connectMongo";
+const express = require("express");
+const cors = require("cors");
+const app = express();
 
+app.use(cors());
 let collection;
 
 async function getChat() {
