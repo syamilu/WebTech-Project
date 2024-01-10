@@ -1,20 +1,18 @@
 // api/postChat.js
 const mongoose = require("mongoose");
-// const cors = require("cors"); // Add this line
-// const bodyParser = require("body-parser");
-// const cookieParser = require("cookie-parser");
-
-// Connect to MongoDB
 const url =
-  "mongodb+srv://syamilu:asdfasdf@webtech01.yxq2azw.mongodb.net/?retryWrites=true&w=majority";
+  "mongodb+srv://syamilu:asdfasdf@webtech01.yxq2azw.mongodb.net/webtech01?retryWrites=true&w=majority";
 mongoose.connect(url);
 
 // Define a schema
-const MessageSchema = new mongoose.Schema({
-  username: String,
-  message: String,
-  timestamp: Date,
-});
+const MessageSchema = new mongoose.Schema(
+  {
+    username: String,
+    message: String,
+    timestamp: Date,
+  },
+  { collection: "messages" }
+);
 
 // Create a model
 const Message = mongoose.model("Message", MessageSchema);
