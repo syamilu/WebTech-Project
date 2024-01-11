@@ -1,0 +1,181 @@
+h2.form-title{
+    color: #FFF;
+    text-align: center;
+    font-size: 24px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+    text-decoration-line: underline;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin: 30px;
+  }
+
+legend {
+    font-size: 30px;
+}
+
+fieldset {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding: 30px;
+    background-color: var(--secondary-color);
+    border-radius: 30px;
+    width: 50%;
+}
+
+.input-group, .text-group {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  width: 90%;
+  margin: auto;
+}
+
+.input-group label , .text-group label{
+  text-wrap:nowrap;
+  margin-top: 15px;
+}
+
+.input-group input {
+  margin-left: 10px;
+  color:white;
+  height: 0.4em;
+  width: 100%;
+  font-size: 20px;
+}
+
+label.text-input {
+    font-size: 20px;
+    margin-bottom: 10px;
+}
+
+label.text-input, input {
+    display: inline-block;
+}
+
+input {
+    padding: 10px 0;
+    border: none;
+    border-bottom: 1px solid white;
+    width: auto;
+    background-color: transparent;
+}
+
+textarea {
+    width: 70%;
+    height: 200px;
+    border: none;
+    padding: 0;
+    margin-left: 10px;
+    margin-top: 15px;
+    overflow: hidden;
+    resize: none;
+    font-size: 24px;
+    line-height: 28px;
+    background-image: linear-gradient(transparent, transparent 27px, white 0px);
+    background-size: 100% 28px;
+    background-color: transparent;
+    color:#FFF
+}
+
+.text-group {
+    display: flex;
+    align-items: flex-start;
+    margin-top: 3vh;
+}
+
+input:focus, textarea:focus{
+  outline: none;
+}
+
+button{
+    margin: 10px;
+    padding: 10px;
+    border-radius: 81px;
+    box-shadow: 1px 3px 4px 0px rgba(47, 82, 61, 0.90);
+    background-color: var(--primary-color);
+    color: white;
+}
+
+button:hover {
+    background-color: #02261C;
+    color: #f7f7f7f1;
+}
+
+.closebtn{
+    padding: 8px;
+    text-decoration: none;
+    font-size: 36px;
+    color: #f1f1f1;
+    display: block; /* Display block instead of inline */
+    transition: 0.3s; /* Transition effects on hover (color) */
+    position: absolute;
+    top: 5px;
+    right: 20px;
+  }
+  
+  /* When you mouse over the navigation links, change their color */
+.closebtn:hover, .closebtn:focus {
+    color: var(--primary-color);
+  }
+
+  .container{
+    background-color: transparent;
+    width: 60%;
+    min-width: 450px;
+    position: relative;
+    margin:  50px auto;
+    padding: 50px 20px;
+    border-radius: 7px;
+    border: 3px solid #ffffff;
+    box-shadow: 0 20px 35px rgba(0,0,0,0.05);
+}
+input[type="file"]{
+    display: none;
+}
+label.file-input{
+    display: block;
+    position: relative;
+    background-color: var(--primary-color);
+    color: #ffffff;
+    font-size: 18px;
+    text-align: center;
+    width: 300px;
+    padding: 18px 0;
+    margin: auto;
+    border-radius: 5px;
+    cursor: pointer;
+}
+label.file-input:hover{
+    background-color: #02261C;
+    cursor:pointer;
+}
+.container p#num-of-files{
+    text-align: center;
+    margin: 20px 0 30px 0;
+}
+#images{
+    width: 90%;
+    position: relative;
+    margin: auto;
+    display: flex;
+    justify-content: space-evenly;
+    gap: 20px;
+    flex-wrap: wrap;
+}
+figure{
+    width: 45%;
+}
+figcaption{
+    text-align: center;
+    font-size: 2.4vmin;
+    margin-top: 0.5vmin;
+}

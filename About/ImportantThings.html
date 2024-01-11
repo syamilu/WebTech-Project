@@ -10,10 +10,12 @@
     <link rel="stylesheet" href="/style.css">
     <link rel="stylesheet" href="/template/subnav.css">
     <link rel="stylesheet" href="ImportantThing.css">
+    <script src="/Form/overlayForm.js"></script>
 </head>
 
 <body>
-    <button onclick="" id="report-form" title="Maintenance Report">
+    <div id="form-container"></div>
+    <button onclick="overlayForm()" id="report-form" title="Maintenance Report">
         <span>
             Maintenance<br>Report
         </span>
@@ -71,9 +73,9 @@
                 Mahallah Online Maintenance Report<br>
                 https://bit.do/mahallahmaintenance
             </p>
-            <label for="ch">Show less</label>
+            <label for="ch" class="ch">Show less</label>
         </div>
-        <label for="ch">Show more</label>
+        <label for="ch" class="ch">Show more</label>
     </div>
 
 

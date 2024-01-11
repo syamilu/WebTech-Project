@@ -1,4 +1,4 @@
-p{
+p.line-between-sentences{
    display : inline;
    color: #568a6e;
 
@@ -9,7 +9,7 @@ p{
    transition: background-size 1000ms, color 700ms  ;
   }
 
-p:hover{
+p.line-between-sentences:hover{
   background-size: 0% 100%;
   color: #121212;
 }

@@ -7,16 +7,20 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Mahallah Salahuddin</title>
     <link rel="stylesheet" href="/style.css">
+    <link rel="stylesheet" href="Form/formsCSS.css" />
+    <script src="Form/overlayForm.js"></script>
     <link rel="icon" type="image/x-icon" href="/favicon.ico">
 
 </head>
 
 <body>
-    <button onclick="" id="report-form" title="Maintenance Report">
+    <div id="form-container"></div>
+    <button onclick="overlayForm()" id="report-form" title="Maintenance Report">
         <span>
             Maintenance<br>Report
         </span>
     </button>
+
     <div class="topnav">
 
         <img id="logo" src="/asset/logo-salahuddin.png" alt="logo" width="60" height="60">
@@ -31,7 +35,7 @@
         </ul>
         <div class="darkmode-toggle">
             <input type="checkbox" id="darkmode-toggle" />
-            <label for="darkmode-toggle"></label>
+            <label for="darkmode-toggle" class="darkmode-toggle"></label>
         </div>
     </div>
 

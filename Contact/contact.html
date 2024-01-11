@@ -11,9 +11,16 @@
     rel="stylesheet" />
   <link rel="stylesheet" href="/style.css">
   <link rel="stylesheet" href="styleSheet.css">
+  <script src="/Form/overlayForm.js"></script>
 </head>
 
 <body>
+  <div id="form-container"></div>
+  <button onclick="overlayForm()" id="report-form" title="Maintenance Report">
+    <span>
+      Maintenance<br>Report
+    </span>
+  </button>
 
   <div class="topnav">
     <img id="logo" src="/asset/logo-salahuddin.png" alt="logo" width="60" height="60">
@@ -59,7 +66,7 @@
 
 
     <h3>Send us a Message</h3>
-    <form>
+    <form class="contact-form">
       <input type="text" placeholder="Name">
       <input type="email" placeholder="Email">
       <textarea placeholder="Message"></textarea>
