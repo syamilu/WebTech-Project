@@ -88,12 +88,40 @@ img {
 }
 
 .card__body h4 {
-  font-size: 1.5rem;
+  font-size: 20px;
   text-transform: capitalize;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7);
 }
 
 .card__footer {
   display: flex;
   padding: 1rem;
   margin-top: auto;
+  align-self: flex-end;
+}
+
+.card__footer a {
+  display: inline-block;
+  padding: 7px 15px;
+  background-color: #114536;
+  color: white;
+  text-decoration: none;
+  border-radius: 30px;
+  transition: background-color 0.3s ease;
+  font-size:x-small ;
+  font-weight: bold;
+}
+
+.card__footer a:hover {
+  background-color: var(--secondary-color);
+}
+
+.card__footer a.dark-mode {
+  background-color: rgb(205, 205, 205);
+  color: var(--primary-color);
+}
+
+.card__footer a.dark-mode:hover {
+  background-color: var(--primary-color);
+  color: white;
 }

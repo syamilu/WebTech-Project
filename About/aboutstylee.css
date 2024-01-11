@@ -1,4 +1,4 @@
-p{
+p.line-between-sentences{
    display : inline;
    color: #568a6e;
 
@@ -9,22 +9,26 @@ p{
    transition: background-size 1000ms, color 700ms  ;
   }
 
-p:hover{
+p.line-between-sentences:hover{
   background-size: 0% 100%;
   color: #121212;
 }
 
 
 .line-between-sentences {
-  line-height: 2;}
+  line-height: 2;
+  
+   
+  }
 
 
 
-  .wrapper{
+  /*.wrapper{
     width: 15rem;
     height: 15rem;
     overflow: hidden;
     border-radius: 20px;
+    margin: 20px;
   }
 .wrapper img{
   width: 100%;
@@ -34,11 +38,12 @@ p:hover{
   display: block;
   width: 100%;
   height: auto;
+  margin: 50px;
 }
 .wrapper :hover img{
   transform: scale(1.2S);
 }
-
+*/
 #mav{
 columns: 240px 2;
 column-gap: 16px;
@@ -47,4 +52,7 @@ padding: 16px;
 border: 1px solid #FF9950;
 resize: both;
 overflow:hidden;
+}
+.prpic{
+  margin-top: 20px;
 }
