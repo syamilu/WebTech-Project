@@ -3,18 +3,21 @@
 
 <head>
     <meta charset="UTF-8">
+    <!-- change content based on time, 5 = 5 seconds -->
+    <!-- <meta http-equiv="refresh" content="5"> -->
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <!--Change the title according to this format:-->
     <!-- (Page) | Mahallah Salahuddin-->
     <title>Mahallah Salahuddin</title>
     <link rel="stylesheet" href="/style.css" />
-    <link rel="stylesheet" href="/News/newsCSS/news.css" />
     <link rel="stylesheet" href="/News/community/communityCSS/community.css" />
     <link rel="stylesheet" href="/template/subnav.css" />
+    <script src="/Form/overlayForm.js"></script>
 </head>
 
 <body>
-    <button onclick="" id="report-form" title="Maintenance Report">
+    <div id="form-container"></div>
+    <button onclick="overlayForm()" id="report-form" title="Maintenance Report">
         <span>
             Maintenance<br>Report
         </span>
@@ -51,7 +54,7 @@
                 </div>
             </div>
             <div id="chatbox">
-                <div class="chatbox-send-container">
+                <!-- <div class="chatbox-send-container">
                     <div class="chatbox-send">
                         <div class="chatbox-send-chat">
                             BLA BLAdasf
@@ -62,13 +65,15 @@
                     <div class="chatbox-receive">
                         <div class="chatbox-receive-chat">
                             ASFJKSBAUHFBASHFBHASBh asdfasdf asdf asdasdf asdf asd
+                            asdfkjasjdfjksadfasjdbfbshdbfhabshbfhsabdhbh
                         </div>
                     </div>
                 </div>
                 <div class="chatbox-send-container">
                     <div class="chatbox-send">
                         <div class="chatbox-send-chat">
-                            BLA BLAdasf asdfasjkdhasdhashdashbd ahasbhdgashdhahds
+                            BLA BLAdasf asdfasjkdhasdhashdashbd
+                            ahasbhdgashdhahdsdfshjashdfhsadjfhsahfjsahfjhsadjhfsdjhjsfhjsafjhsjdhjfasdsjfasfjhsafjhsadjfsadjfhjd
                         </div>
                     </div>
                 </div>
@@ -85,16 +90,22 @@
                             BLA BLAdasf asdfasjkdhasdhashdashbd ahasbhdgashdhahds
                         </div>
                     </div>
-                </div>
+                </div> -->
                 <!-- Must set to the bottom -->
             </div>
             <div id="chatbox-input">
-                <form name="message" action="">
+                <form id="message-form">
                     <input name="usermsg" type="text" id="usermsg" />
                     <input name="submitmsg" type="submit" id="submitmsg" value="Send" />
                 </form>
             </div>
         </div>
+
+        <script src="/darkmode.js"></script>
+        <script src="https://cdn.jsdelivr.net/npm/js-cookie@2/src/js.cookie.min.js"></script>
+        <script src="/News/community/communityJS/client.js"></script>
+        <script src="/News/community/communityJS/post.js"></script>
+        <script src="/News/community/communityJS/cookie.js"></script>
 </body>
 
 </html>

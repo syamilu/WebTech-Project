@@ -6,17 +6,18 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Facilities | Mahallah Salahuddin</title>
 
-  <link rel="stylesheet" href="style.css">
-  <link rel="stylesheet" href="facilitiestyle.css">
-
+  <link rel="stylesheet" href="/style.css">
+  <link rel="stylesheet" href="facilitiestyle1.css">
+  <link rel="stylesheet" href="/template/subnav.css">
+  <script src="/Form/overlayForm.js"></script>
 
 
 </head>
 
 <body>
-
-  <button onclick="" id="report-form" title="Maintenance Report">
-    <span>MAINTENANCE REPORT</span>
+  <div id="form-container"></div>
+  <button onclick="overlayForm()" id="report-form" title="Maintenance Report">
+    <span>Maintenance<br> Report</span>
   </button>
 
   <div class="topnav">
@@ -24,12 +25,12 @@
     <img id="logo" src="/asset/logo-salahuddin.png" alt="logo" width="60" height="60">
 
     <ul>
-      <li><a href="../index.html">HOME</a></li>
-      <li><a href="../news.html">NEWS</a></li>
-      <li><a class="active" href="../facilities.html">FACILITIES</a></li>
-      <li><a href="../maps.html">MAPS</a></li>
-      <li><a href="../contacts.html">CONTACTS</a></li>
-      <li><a href="../about.html">ABOUT</a></li>
+      <li><a href="/index.html">Home</a></li>
+      <li><a href="/News/whatsnew/news.html">News</a></li>
+      <li><a class="active" href="facilities1.html">Facilities</a></li>
+      <li><a href="/Maps/maps.html">Maps</a></li>
+      <li><a href="/Contact/contact.html">Contact</a></li>
+      <li><a href="/About/about.html">About</a></li>
     </ul>
 
     <div class="darkmode-toggle">
@@ -37,6 +38,13 @@
       <label for="darkmode-toggle"></label>
     </div>
 
+  </div>
+  <div class="subtopnav">
+    <ul class="navcontent">
+      <li><a href="/Facilities/facilities1.html" class="active"><span>Facilities 1</span></a></li>
+      <li><a href="/Facilities/facilities2.html">Facilities 2</a></li>
+      <li><a href="/Facilities/facilities3.html">Facilities 3</a></li>
+    </ul>
   </div>
 
 
@@ -93,12 +101,18 @@
       residences often provide high-speed internet access, either wired or wireless, enabling students to stay connected
       and complete online tasks efficiently. Some residences may also offer additional technology provisions such as
       telephone lines or cable TV connections.</p>
+  </div>
+  <div class="gallery">
+    <img src="room.jpg">
+    <img src="room2.jpg">
+    <img src="room3.JPG">
+    <img src="room4.jpg">
+    <img src="room5.JPG">
+    <img src="room6.jpeg">
+    <img src="room7.jpg">
+  </div>
 
-    <div class="gallery">
-      <img src="room.jpg">
-      <img src="room2.jpg">
-      <img src="room3.JPG">
-    </div>
+  <script src="/darkmode.js"></script>
 
 </body>
 

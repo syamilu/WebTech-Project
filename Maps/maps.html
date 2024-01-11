@@ -7,24 +7,25 @@
     <!--Change the title according to this format:-->
     <!-- (Page) | Mahallah Salahuddin-->
     <title>Mahallah Salahuddin</title>
-    <link rel="stylesheet" href="../style.css">
-    </link>
+    <link rel="stylesheet" href="/style.css" />
+    <script src="/Form/overlayForm.js"></script>
 </head>
 
 <body>
-    <button onclick="" id="report-form" title="Maintenance Report">
+    <div id="form-container"></div>
+    <button onclick="overlayForm()" id="report-form" title="Maintenance Report">
         <span>
             Maintenance<br>Report
         </span>
     </button>
     <div class="topnav">
-        <img id="logo" src="../logo-salahuddin.png" alt="logo" width="60" height="60">
+        <img id="logo" src="/asset/logo-salahuddin.png" alt="logo" width="60" height="60">
         <ul>
             <!--Put class="active" according to your working directory and also link to other pages <../(page)>-->
             <li><a href="/index.html">Home</a></li>
             <li><a href="/News/whatsnew/news.html">News</a></li>
             <li><a href="/Facilities/facilities1.html">Facilities</a></li>
-            <li><a href="/Maps/maps.html">Maps</a></li>
+            <li><a href="/Maps/maps.html" class="active">Maps</a></li>
             <li><a href="/Contact/contact.html">Contacts</a></li>
             <li><a href="/About/about.html">About</a></li>
         </ul>
@@ -42,6 +43,8 @@
             allow="zoom; fullscreen" width="800" height="600" referrerpolicy="no-referrer-when-downgrade">
         </iframe>
     </div>
+
+    <script src="/darkmode.js"></script>
 </body>
 
 </html>
