@@ -1,3 +1,5 @@
+import updateChat from "./client.js";
+
 document
   .getElementById("message-form")
   .addEventListener("submit", function (event) {
@@ -20,7 +22,10 @@ document
       }),
     })
       .then((response) => response.json())
-      .then((data) => console.log(data))
+      .then((data) => {
+        console.log(data);
+        updateChat();
+      })
       .catch((error) => {
         console.error("Error:", error);
       });

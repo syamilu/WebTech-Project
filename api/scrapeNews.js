@@ -27,17 +27,17 @@ async function scrapeNews(url) {
   return allNews;
 }
 
-module.exports = async (req, res) => {
-  const news = await scrapeNews("https://news.iium.edu.my/?cat=4");
-  res.json(news);
-};
-
-//for running on local host(need to change fetch url in index.js to http://localhost:3000/api)
-// app.get("/api", async (req, res) => {
+// module.exports = async (req, res) => {
 //   const news = await scrapeNews("https://news.iium.edu.my/?cat=4");
 //   res.json(news);
-// });
+// };
 
-// app.listen(port, () => {
-//   console.log(`Server running at http://localhost:${port}`);
-// });
+//for running on local host(need to change fetch url in index.js to http://localhost:3000/api)
+app.get("/api", async (req, res) => {
+  const news = await scrapeNews("https://news.iium.edu.my/?cat=4");
+  res.json(news);
+});
+
+app.listen(port, () => {
+  console.log(`Server running at http://localhost:${port}`);
+});

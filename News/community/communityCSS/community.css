@@ -20,6 +20,11 @@
   box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05); 
 }
 
+#chatbox-container.dark-mode {
+  background-color: #2b503c5c;
+  box-shadow: 0 10px 15px -3px #568a6e, 0 4px 6px -2px rgba(0, 0, 0, 0.05); 
+}
+
 #chatbox-header{
   display: flex; 
   padding: 1rem; 
@@ -35,6 +40,10 @@
   margin-left: 0.5rem; 
   align-items: center;
   color: var(--primary-color);
+}
+
+#chatbox-title.dark-mode {
+  color: #7abf9a;
 }
 
 #chatbox{
@@ -72,6 +81,7 @@
   word-wrap: break-word;
   overflow-wrap: break-word;
 }
+
 .chatbox-receive-container {
   display: flex;
   justify-content: flex-start;
@@ -91,6 +101,13 @@
   text-align: left;
   font-size: small;
   box-shadow: 10px 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05);
+}
+
+.chatbox-receive.dark-mode {
+  background-color: #2b503c5c;
+  border-color: #568a6e;
+  color: #7abf9a;
+
 }
 
 #chatbox-input{
@@ -113,6 +130,12 @@
   text-align: left;
   font-size: small;
   box-shadow: 10px 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05);
+}
+
+#usermsg.dark-mode {
+  background-color: #2b503c;
+  border-color: #568a6e;
+  color: #7abf9a;
 }
 
 #submitmsg{
