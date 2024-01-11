@@ -82,5 +82,5 @@ document.addEventListener("DOMContentLoaded", function () {
   updateChat();
 
   // Update the chat every 5 seconds
-  setInterval(updateChat, 5000);
+  setInterval(updateChat, 3000);
 });
