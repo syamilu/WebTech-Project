@@ -3,7 +3,7 @@ if (localStorage.getItem("darkMode") === "enabled") {
   document.getElementById("darkmode-toggle").checked = true;
   document
     .querySelectorAll(
-      ".topnav, .topnav a.active, #report-form, #chatbox-container, #chatbox-title, .chatbox-receive, .chatbox-send, #usermsg, .card__footer a"
+      ".topnav, .topnav a.active, #report-form, #chatbox-container, #chatbox-title, .chatbox-receive, .chatbox-send, #usermsg, .card__footer a, .card__footer a:hover"
     )
     .forEach(function (el) {
       el.classList.add("dark-mode");
@@ -16,7 +16,7 @@ document
     document.body.classList.toggle("dark-mode", this.checked);
     document
       .querySelectorAll(
-        ".topnav, .topnav a.active, #report-form, #chatbox-container, #chatbox-title, .chatbox-receive, .chatbox-send, #usermsg, .card__footer a"
+        ".topnav, .topnav a.active, #report-form, #chatbox-container, #chatbox-title, .chatbox-receive, .chatbox-send, #usermsg, .card__footer a, .card__footer a:hover"
       )
       .forEach(
         function (el) {
