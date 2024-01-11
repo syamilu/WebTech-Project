@@ -67,10 +67,11 @@
   box-shadow: 10px 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05);
 }
 
-.chatbox-send-chat{
+.chatbox-send-chat, .chatbox-receive-chat {
   margin: 0 0.1rem;
+  word-wrap: break-word;
+  overflow-wrap: break-word;
 }
-
 .chatbox-receive-container {
   display: flex;
   justify-content: flex-start;
