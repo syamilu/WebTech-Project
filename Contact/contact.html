@@ -11,9 +11,16 @@
     rel="stylesheet" />
   <link rel="stylesheet" href="/style.css">
   <link rel="stylesheet" href="styleSheet.css">
+  <link rel="javascript" href="contact.js">
 </head>
 
 <body>
+  <div id="form-container"></div>
+  <button onclick="overlayForm()" id="report-form" title="Maintenance Report">
+    <span>
+      Maintenance<br>Report
+    </span>
+  </button>
 
   <div class="topnav">
     <img id="logo" src="/asset/logo-salahuddin.png" alt="logo" width="60" height="60">
@@ -31,7 +38,7 @@
 
     <div class="darkmode-toggle">
       <input type="checkbox" id="darkmode-toggle" />
-      <label for="darkmode-toggle"></label>
+      <label for="darkmode-toggle" class="darkmode-toggle"></label>
     </div>
   </div>
 
@@ -50,7 +57,7 @@
     <p> IUM HEALTH AND WELNESS CENTRE (IHWC) 03-6421 4444 (24 hours)</p>
 
 
-    <p><strong>Adress:</strong></p>
+    <p><strong>ADRESS:</strong></p>
     <p>MAHALLAH SALAHUDDIN AL-AYUBBI
       IIUM JALAN GOMBAK
       53100 KUALA LUMPUR
@@ -59,7 +66,7 @@
 
 
     <h3>Send us a Message</h3>
-    <form>
+    <form class="contact-form">
       <input type="text" placeholder="Name">
       <input type="email" placeholder="Email">
       <textarea placeholder="Message"></textarea>
@@ -76,16 +83,16 @@
     <h3>Follow Us</h3>
 
     <a href="https://www.facebook.com/mrc.msa">
-      <img src="facebook-icon.png" alt="Facebook">
+      <img src="f.png" alt="Facebook">
     </a>
 
 
     <a href="https://twitter.com/iium_msa">
-      <img src="twitter-icon.png" alt="Twitter">
+      <img src="t.png" alt="Twitter">
     </a>
 
     <a href="https://www.youtube.com/channel/UClJOGgnZezELoxiuB4sGSCg/videos">
-      <img src="youtube-icon.png" alt="YouTube">
+      <img src="y.png" alt="YouTube">
     </a>
   </div>
   <script src="/darkmode.js"></script>

@@ -12,10 +12,12 @@
     <link rel="stylesheet" href="/style.css" />
     <link rel="stylesheet" href="/News/community/communityCSS/community.css" />
     <link rel="stylesheet" href="/template/subnav.css" />
+    <script src="/Form/overlayForm.js"></script>
 </head>
 
 <body>
-    <button onclick="" id="report-form" title="Maintenance Report">
+    <div id="form-container"></div>
+    <button onclick="overlayForm()" id="report-form" title="Maintenance Report">
         <span>
             Maintenance<br>Report
         </span>
@@ -33,7 +35,7 @@
         </ul>
         <div class="darkmode-toggle">
             <input type="checkbox" id="darkmode-toggle" />
-            <label for="darkmode-toggle"></label>
+            <label for="darkmode-toggle" class="darkmode-toggle"></label>
         </div>
     </div>
     <div class="subtopnav">

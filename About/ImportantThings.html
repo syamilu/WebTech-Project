@@ -10,10 +10,12 @@
     <link rel="stylesheet" href="/style.css">
     <link rel="stylesheet" href="/template/subnav.css">
     <link rel="stylesheet" href="ImportantThing.css">
+    <script src="/Form/overlayForm.js"></script>
 </head>
 
 <body>
-    <button onclick="" id="report-form" title="Maintenance Report">
+    <div id="form-container"></div>
+    <button onclick="overlayForm()" id="report-form" title="Maintenance Report">
         <span>
             Maintenance<br>Report
         </span>
@@ -31,7 +33,7 @@
         </ul>
         <div class="darkmode-toggle">
             <input type="checkbox" id="darkmode-toggle" />
-            <label for="darkmode-toggle"></label>
+            <label for="darkmode-toggle" class="darkmode-toggle"></label>
         </div>
     </div>
     <div class="subtopnav">
@@ -71,27 +73,27 @@
                 Mahallah Online Maintenance Report<br>
                 https://bit.do/mahallahmaintenance
             </p>
-            <label for="ch">Show less</label>
+            <label for="ch" class="ch">Show less</label>
         </div>
-        <label for="ch">Show more</label>
+        <label for="ch" class="ch">Show more</label>
     </div>
 
 
-    <p>
-        <strong> List of Compoundable Offences</strong>
-    </p>
 
     <div class="gallery">
-        <img src="Picture1.jpg">
 
+        <div>
+            <div class="text"><strong>List of Compoundable Offences</strong></div>
+            <img src="Picture1.jpg" alt="Image 1">
+        </div>
+
+        <div>
+            <div class="text"><strong>Do’s & Don’ts</strong></div>
+            <img src="Picture2.jpg" alt="Image 2">
+        </div>
     </div>
-    <p><strong>Do’s & Don’ts</strong></p>
-    <div class="gallery">
-        <img src="Picture2.jpg">
-
-    </div>
-
     <script src="/darkmode.js"></script>
+
 </body>
 
 </html>

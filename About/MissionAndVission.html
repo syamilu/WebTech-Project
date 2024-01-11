@@ -11,13 +11,18 @@
   <link rel="stylesheet" href="/style.css">
   <link rel="stylesheet" href="/template/subnav.css">
   <link rel="stylesheet" href="missionAndVission.css">
-
+  <script src="/Form/overlayForm.js"></script>
 
 
 </head>
 
 <body>
-
+  <div id="form-container"></div>
+  <button onclick="overlayForm()" id="report-form" title="Maintenance Report">
+    <span>
+      Maintenance<br>Report
+    </span>
+  </button>
   <div class="topnav">
     <img id="logo" src="/asset/logo-salahuddin.png" alt="logo" width="60" height="60">
     <ul>
@@ -31,12 +36,14 @@
     </ul>
     <div class="darkmode-toggle">
       <input type="checkbox" id="darkmode-toggle" />
-      <label for="darkmode-toggle"></label>
+      <label for="darkmode-toggle" class="darkmode-toggle"></label>
     </div>
   </div>
   <div class="subtopnav">
     <ul class="navcontent">
+
       <li><a href="/About/about.html">Principal's Message</a></li>
+
       <li><a href="/About/ImportantThings.html">Important Things To Know </a></li>
       <li><a href="MissionAndVission.html" class="active"><span>Mission And Vission</span></a></li>
     </ul>
@@ -56,18 +63,21 @@
     <strong> <span class="different-font">Mission</span></strong><br>
 
     Our mission at IIUM Mahallah Salahuddin is to provide a conducive and supportive environment for students,
-    cultivating a holistic educational experience that encompasses academic, social, and spiritual dimensions. Grounded
+    cultivating a holistic educational experience that encompasses academic, social, and spiritual dimensions.
+    Grounded
     in Islamic values, we aim to:<br>
 
     <strong>Academic Excellence: </strong> an environment that encourages intellectual curiosity, diligence, and
-    continuous learning, enabling residents to excel in their academic pursuits and contribute meaningfully to society.
+    continuous learning, enabling residents to excel in their academic pursuits and contribute meaningfully to
+    society.
 
     <br><strong>Personal Development: </strong> the holistic development of individuals by emphasizing
     character-building, leadership skills, and a strong sense of responsibility. We strive to empower residents to
     become well-rounded individuals prepared to meet the challenges of a dynamic world.
 
     <br><strong> Spiritual Growth:</strong> Facilitate an atmosphere that nurtures a deep connection with Islam,
-    promoting a sense of spirituality and mindfulness in daily life. Through Islamic teachings and practices, residents
+    promoting a sense of spirituality and mindfulness in daily life. Through Islamic teachings and practices,
+    residents
     are encouraged to develop a strong moral compass, compassion for others, and a sense of community.
 
     <br> <strong> Building:</strong> Cultivate a sense of belonging and unity within the Mahallah, fostering an
@@ -92,7 +102,7 @@
 
   </div>
 
-
+  <script src="/darkmode.js"></script>
 </body>
 
 </html>
