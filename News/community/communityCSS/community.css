@@ -95,9 +95,9 @@
   margin-right: auto;
   border-radius: 0.6rem; 
   border-width: 1px; 
-  border-color: #568a6e;;
+  border-color: var(--primary-color);
   border-style: solid;
-  color: #7abf9a;
+  color: var(--primary-color);
   text-align: left;
   font-size: small;
   box-shadow: 10px 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05);
