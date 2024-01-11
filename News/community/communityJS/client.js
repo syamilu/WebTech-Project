@@ -70,6 +70,8 @@ async function updateChat() {
           `;
       chatbox.appendChild(chatDiv);
     });
+    // Scroll to the bottom of the chatbox after updating
+    chatbox.scrollTop = chatbox.scrollHeight;
   } catch (err) {
     console.error(err);
   }
