@@ -1,10 +1,50 @@
-const express = require('express');
-const app = express();
+emailjs.send('service_abcdefg', 'template_123', {
+  name: 'James',
+  notes: 'Hello!'  
+})
 
-app.use(express.static('public'));
 
-const port = 3000;
+emailjs.sendForm('service_abcdefg', 'template_123', document.getElementById('myForm'))
 
-app.listen(port, () => {
-  console.log(`Server listening on port ${port}`);
+
+document.getElementById('contact-form').addEventListener('submit', function(event) {
+
+  event.preventDefault();
+
+  emailjs.sendForm('service_id', 'template_id', this)
+    .then(function() {
+      console.log('Email sent!')
+    })
+    .catch(function(err) {
+      console.log('Error sending email', err)  
+    });
+
+});
+
+
+// Send email API request
+fetch('https://api.emailjs.com/api/v1.0/email/send', {
+  method: 'POST',
+  body: JSON.stringify({
+    service_id: 'service_abcdefg',
+    template_id: 'template_123',
+    user_id: 'YOUR_PUBLIC_KEY',
+    template_params: {
+      name: 'James'  
+    }
+  })
+});
+
+
+// On form submit
+document.getElementById('myForm').addEventListener('submit', function(e) {
+
+  e.preventDefault();
+  
+  // Send form data to EmailJS API
+  fetch('https://api.emailjs.com/api/v1.0/email/send-form', {
+    method: 'POST',
+    body: new FormData(this) 
+  });
+
 });
