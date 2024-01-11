@@ -36,7 +36,7 @@
 //   }
 // });
 
-async function updateChat() {
+export async function updateChat() {
   try {
     const response = await fetch("/api/getChat");
     if (!response.ok) {

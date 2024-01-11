@@ -1,4 +1,4 @@
-import updateChat from "./client.js";
+import { updateChat } from "./client.js";
 
 document
   .getElementById("message-form")
