@@ -15,6 +15,9 @@ body{
     text-align: center;
     height: 1000px;
     font-family: 'Poppins', sans-serif;
+    position: relative;
+    overflow-x: hidden;
+    max-width: 100%;
 }
 
 h4{
@@ -154,21 +157,21 @@ ul li a:hover{
     position: fixed;
     bottom: 20px;
     right: 30px;
-    z-index: 1;
-    font-size: 14px; /* reduce the font size */
+    z-index: 2;
+    font-size: 14px;
     border: none;
     outline: none;
     color: white;
     cursor: pointer;
     padding: 10px; /* reduce the padding */
-    width: 150px; /* increase the width */
-    height: 50px; /* increase the height */
+    width: 60px; 
+    height: 50px; 
+    max-width: 100%;
+    max-height: 100%;
     border-radius: 136px;
     background: #235F4E;
     box-shadow: 4px -7px 8px 1px rgba(0, 0, 0, 0.25) inset;
-    display: flex; /* add this to center the text vertically */
-    align-items: center; /* add this to center the text vertically */
-    justify-content: center; /* add this to center the text horizontally */
+    overflow: hidden;
 }
 
 #report-form span {
@@ -212,7 +215,7 @@ body.dark-mode {
 #form-container {
     position: absolute;
     justify-content: center;
-    z-index: 2;
+    z-index: 3;
     align-items:center;
     width: 100%;
     height: auto;

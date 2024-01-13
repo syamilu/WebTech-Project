@@ -1,0 +1,298 @@
+ h2{
+    font-size: 56px;
+    color:black;
+}
+
+h3{
+    font-size: 36px;
+    color:black;
+    font-family: 'Roboto', sans-serif;
+}
+ 
+/*Headline section*/
+.image-headline{
+    position: relative;
+    width: 100%;
+    height: 70vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-size: cover;
+    background-attachment: fixed;
+    background-image: url(/asset/UB-kawad.jpg);;
+    background-position: top 0px center;
+    overflow: clip;
+    margin-bottom: 5em;
+}
+
+.image-headline::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    background: rgba(0, 0, 0, 0.5); /* Change this to the color and opacity you want */
+    z-index: 1;
+}
+
+.overlay-text {
+    position: static;
+    display: inline-block;
+    text-overflow: clip;
+    color: white; 
+    padding: 10px 20px; 
+    font-size: 20px; 
+    text-align: center;
+    z-index: 2;
+  }
+
+  /*Facilities section*/
+  .facilities-index{
+    margin: 7vh 2vw;
+    color: black;
+    width: auto;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .flip-card {
+    flex-shrink: 1;
+    margin: 40px;
+    padding: auto;
+    background-color: transparent;
+    width: 80%;
+    width: 350px;
+    min-width: 300px;
+    height: 300px;
+    border: 1px solid transparent;
+    border-radius: 10px;
+    perspective: 1000px; /* Remove this if you don't want the 3D effect */
+  }
+  
+  /* This container is needed to position the front and back side */
+  .flip-card-inner {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    text-align: center;
+    transition: transform 0.8s;
+    transform-style: preserve-3d;
+  }
+  
+  /* Do an horizontal flip when you move the mouse over the flip box container */
+  .flip-card:hover .flip-card-inner {
+    transform: rotateY(180deg);
+  }
+  
+  /* Position the front and back side */
+  .flip-card-front, .flip-card-back {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    -webkit-backface-visibility: hidden; /* Safari */
+    backface-visibility: hidden;
+  }
+  
+  /* Style the front side (fallback if image is missing) */
+  .flip-card-front {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    background-color: var(--primary-color);
+    color: white;
+    border-radius: 10px;
+    padding: 10px;
+  }
+  
+  /* Style the back side */
+  .flip-card-back {
+    background-color: var(--primary-color);
+    color: white;
+    transform: rotateY(180deg);
+    border-radius: 10px;
+    min-width: inherit;
+    padding: 10px;
+  }
+
+  .faci-desc{
+    font-size: 1.2em;
+    margin: 10px;
+    text-align:center;
+  }
+
+  .panel{
+    display: flex;
+    flex-direction: column;
+    margin: 5vh auto;
+    border-top: solid 1px rgb(70, 70, 70); 
+    border-bottom: solid 1px rgb(70, 70, 70);
+    align-items:normal;
+    width: 90%;
+    /*box-shadow: 0 0 10px rgba(0,0,0,0.5);*/
+  }
+
+  .figures-container{
+    display:inline-flex;
+    flex-direction: row;
+    justify-content: space-around;
+  }
+
+  .figure{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin: 20px;
+    padding: 20px;
+    color: black;
+    text-wrap: wrap;
+    font-size: 1.5em;
+  }
+
+.facilitiesBtn{
+    width: 30%;
+    min-width: 300px;
+    height: 35px;
+    border-radius: 0%;
+    font-size: 22px;
+    padding: 1.3em;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 5vh auto;
+}
+
+/*UB section*/
+.ub-index{
+    margin: 5vh 2vw;
+    color: black;
+    display: flex;
+    flex-direction: column;
+    justify-content: start;
+    align-items: stretch;
+    background-color: #54836a;
+    margin:5vh 0;
+    width: 100vw;
+}
+
+.ub{
+    display: flex;
+    flex-direction: row;
+    width: 100vw;
+    padding: 0;
+    margin-bottom: 5vh;
+    align-items: stretch;
+    justify-content: start;
+    justify-items: stretch;
+
+}
+
+video{
+    grid-area: video;
+    object-fit: cover;
+    margin: 0;
+    padding: 0;
+    width: 100vw;
+    min-width: 640px;
+    min-height: 480px;
+}
+
+/*#tabs{
+    background-color: var(--primary-color);
+}*/
+
+.inter-image{
+  height: 500px;
+  width: 100%;
+  background-image: url(/asset/omar-elsharawy-JkRloh8YN_4-unsplash.jpg);
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  position: relative;
+}
+
+.inter-image::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  background: linear-gradient(to bottom, RGB(86, 138, 110), transparent); 
+  z-index: 1;
+  height: 50%;
+}
+
+/*Contacts section*/
+
+.contacts{
+  margin: 5vh 2vw;
+}
+
+.contactBtn{
+  background-color: var(--primary-color);
+  box-shadow: none;
+  border: solid 3px #54836a;
+  width: 180px;
+  height: 50px;
+  box-shadow: var(--box-shadow);
+}
+
+.contactBtn:hover {
+  border: solid 3px yellowgreen;
+}
+
+.contactBtn i {
+  margin: 0 5px;
+}
+
+.footer{
+  background-color: var(--primary-color);
+  padding: 10px;
+}
+
+.social{
+  margin: 5px;
+}
+
+a.anchor {
+  color: aliceblue;
+}
+
+a.anchor:hover {
+  color: #9bc0ac;
+}
+
+@media (max-width: 1024px) {   
+  .ub{
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-areas: 
+        "video" 
+        "info";
+    width: 100%;
+    margin: 0;
+    padding: 0;
+    margin-bottom: 5vh;
+    grid-gap: 5vw;
+    align-items: stretch;
+  }
+
+.facilities-index{
+    flex-direction: column;
+  }
+
+}
+
+@media (max-width: 780px){
+  
+}
+
+@media (max-width: 650px) {
+.figures-container{
+  flex-direction: column;
+}
+}
