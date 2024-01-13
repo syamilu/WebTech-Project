@@ -4,6 +4,35 @@
 <html lang="en">
 
 <head>
+ <!-- Add the emailjs SDK -->
+ <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"></script>
+
+ <!-- Initialize emailjs with your public key -->
+ <script type="text/javascript">
+   (function() {
+     emailjs.init('YOUR_PUBLIC_KEY');
+   })();
+ </script>
+
+ <!-- Handle form submit -->
+ <script type="text/javascript">
+   window.onload = function() {
+     document.getElementById('contact-form').addEventListener('submit', function(event) {
+       event.preventDefault();
+
+       // Generate contact number
+       this.contact_number.value = Math.random() * 100000 | 0;
+
+       // Send form with emailjs
+       emailjs.sendForm('contact_service', 'contact_form', this)
+         .then(function() {
+           console.log('SUCCESS!');
+         }, function(error) {
+           console.log('FAILED...', error);
+         });
+     });
+   }
+ </script>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Contact Us - Mahallah Salahuddin</title>
@@ -11,7 +40,7 @@
     rel="stylesheet" />
   <link rel="stylesheet" href="/style.css">
   <link rel="stylesheet" href="styleSheet.css">
-  <script src="/Form/overlayForm.js"></script>
+  <script src="contact.js"></script>
 </head>
 
 <body>
@@ -38,7 +67,7 @@
 
     <div class="darkmode-toggle">
       <input type="checkbox" id="darkmode-toggle" />
-      <label for="darkmode-toggle"></label>
+      <label for="darkmode-toggle" class="darkmode-toggle"></label>
     </div>
   </div>
 
@@ -57,7 +86,7 @@
     <p> IUM HEALTH AND WELNESS CENTRE (IHWC) 03-6421 4444 (24 hours)</p>
 
 
-    <p><strong>Adress:</strong></p>
+    <p><strong>ADRESS:</strong></p>
     <p>MAHALLAH SALAHUDDIN AL-AYUBBI
       IIUM JALAN GOMBAK
       53100 KUALA LUMPUR
@@ -66,10 +95,14 @@
 
 
     <h3>Send us a Message</h3>
+
+   
+
     <form class="contact-form">
-      <input type="text" placeholder="Name">
-      <input type="email" placeholder="Email">
-      <textarea placeholder="Message"></textarea>
+
+      <input type="text" placeholder="Name" name="user_name">
+      <input type="email" placeholder="Email" name="user_email">
+      <textarea placeholder="Message" name="message"></textarea>
       <button type="submit">Submit</button>
     </form>
   </div>
@@ -83,16 +116,16 @@
     <h3>Follow Us</h3>
 
     <a href="https://www.facebook.com/mrc.msa">
-      <img src="facebook-icon.png" alt="Facebook">
+      <img src="f.png" alt="Facebook">
     </a>
 
 
     <a href="https://twitter.com/iium_msa">
-      <img src="twitter-icon.png" alt="Twitter">
+      <img src="t.png" alt="Twitter">
     </a>
 
     <a href="https://www.youtube.com/channel/UClJOGgnZezELoxiuB4sGSCg/videos">
-      <img src="youtube-icon.png" alt="YouTube">
+      <img src="y.png" alt="YouTube">
     </a>
   </div>
   <script src="/darkmode.js"></script>

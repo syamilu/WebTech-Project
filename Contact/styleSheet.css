@@ -71,6 +71,7 @@
     max-width: 800px;
     margin: 0 auto;
     padding: 40px;
+     line-height: 1.5;
   }
 
   h2, h3 {
@@ -104,4 +105,14 @@
   .social-media a:hover img {
     transform: translateY(-5px);
     transition: transform 0.3s;
+  }
+
+  p {
+    margin: 5px 0; /* Reduce vertical spacing between paragraphs */
+  }
+
+
+  p strong {
+    display: block; /* Put strong on own line */
+    margin-bottom: 5px; /* Add bit of spacing before content */
   }
