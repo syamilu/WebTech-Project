@@ -48,3 +48,19 @@ document.getElementById('myForm').addEventListener('submit', function(e) {
   });
 
 });
+
+
+emailjs.init('YOUR_PUBLIC_KEY'); 
+
+// Handle form submit
+document.getElementById('contact-form').addEventListener('submit', function(e) {
+
+  e.preventDefault();
+
+  // Send form with EmailJS
+  emailjs.sendForm('service_id', 'template_id', this)
+    .then(function() {
+      console.log('Email sent!');
+    });
+
+});
