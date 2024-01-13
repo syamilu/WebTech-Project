@@ -1,8 +1,8 @@
 p.line-between-sentences{
    display : inline;
-   color: #568a6e;
+   color: #000000;
 
-   background-image: linear-gradient(#cccccc,#cccc);
+   background-image: linear-gradient(#e3e3e3,#e3e3e3);
    background-repeat: no-repeat;
    background-position: right;
    background-size: 100% 100%;
@@ -55,4 +55,26 @@ overflow:hidden;
 }
 .prpic{
   margin-top: 20px;
+}
+
+
+.box {
+  background-color: #3e7264; 
+  border-radius: 5px;
+  box-shadow: 0 0 10px rgba(0,0,0,0.1);
+  max-width: 800px; 
+  margin: 50px auto;
+  padding: 20px;
+}
+
+.box-image {
+  display: block;
+  margin: 0 auto; 
+  height: 200px;
+}
+
+.box-text {
+  text-align: center;
+  margin-top: 10px;
+  width: 500;
 }

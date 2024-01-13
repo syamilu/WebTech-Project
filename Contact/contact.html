@@ -4,6 +4,35 @@
 <html lang="en">
 
 <head>
+ <!-- Add the emailjs SDK -->
+ <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"></script>
+
+ <!-- Initialize emailjs with your public key -->
+ <script type="text/javascript">
+   (function() {
+     emailjs.init('YOUR_PUBLIC_KEY');
+   })();
+ </script>
+
+ <!-- Handle form submit -->
+ <script type="text/javascript">
+   window.onload = function() {
+     document.getElementById('contact-form').addEventListener('submit', function(event) {
+       event.preventDefault();
+
+       // Generate contact number
+       this.contact_number.value = Math.random() * 100000 | 0;
+
+       // Send form with emailjs
+       emailjs.sendForm('contact_service', 'contact_form', this)
+         .then(function() {
+           console.log('SUCCESS!');
+         }, function(error) {
+           console.log('FAILED...', error);
+         });
+     });
+   }
+ </script>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Contact Us - Mahallah Salahuddin</title>
@@ -11,7 +40,7 @@
     rel="stylesheet" />
   <link rel="stylesheet" href="/style.css">
   <link rel="stylesheet" href="styleSheet.css">
-  <link rel="javascript" href="contact.js">
+  <script src="contact.js"></script>
 </head>
 
 <body>
@@ -66,10 +95,14 @@
 
 
     <h3>Send us a Message</h3>
+
+   
+
     <form class="contact-form">
-      <input type="text" placeholder="Name">
-      <input type="email" placeholder="Email">
-      <textarea placeholder="Message"></textarea>
+
+      <input type="text" placeholder="Name" name="user_name">
+      <input type="email" placeholder="Email" name="user_email">
+      <textarea placeholder="Message" name="message"></textarea>
       <button type="submit">Submit</button>
     </form>
   </div>
