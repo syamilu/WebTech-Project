@@ -1,62 +1,54 @@
-
-
-  .card{
-    max-width: 800px;
-    margin: 0 auto;
-    padding: 40px;
-
-  }
-  #ch{
-    display: none;
-
-
+.card {
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 40px;
 }
-  #ch:checked ~ .content{
-    display: block;
-  }
-.content{
-    display: none;
+li {
+  display: inline;
 }
 
+#ch {
+  display: none;
+}
+#ch:checked ~ .content {
+  display: block;
+}
+.content {
+  display: none;
+}
 
-  label.ch{
-display: inline-block;
-cursor:pointer;
-color: #080808;
-background-color: rgb(5, 99, 50);
-padding: 3px 13px;
-border-radius: 3px;
-margin-top: 12px;
-  }
+label.ch {
+  display: inline-block;
+  cursor: pointer;
+  color: white;
+  background-color: rgb(5, 99, 50);
+  padding: 3px 13px;
+  border-radius: 3px;
+  margin-top: 12px;
+}
 
+.gallery {
+  display: flex;
+  justify-content: center;
+}
 
+.gallery img {
+  flex: 0 0 auto;
+  width: 500px;
+  height: 400px;
+  object-fit: cover;
+  margin-right: 10px;
+}
 
-  .gallery {
-    display: flex;
-  
-    justify-content: center;
-  }
-  
-  .gallery img {
-    flex: 0 0 auto;
-    width: 500px; 
-    height: 400px;
-    object-fit: cover;
-    margin-right: 10px;
-  }
-  
+.card label {
+  display: inline-block;
+  width: 15%; /* Make both buttons 50% width */
+}
 
-  .card label {
-    display: inline-block;
-    width: 15%; /* Make both buttons 50% width */
-  }
-  
-  .card #ch:checked ~ label[for="ch"] {
-    display: inline-block;
-    width: 15%;
-  } 
-  
-  .card label[for="ch"] 
-  .card #ch:checked ~ label[for="ch"] {
-    
-  }
+.card #ch:checked ~ label[for="ch"] {
+  display: inline-block;
+  width: 15%;
+}
+
+.card label[for="ch"] .card #ch:checked ~ label[for="ch"] {
+}

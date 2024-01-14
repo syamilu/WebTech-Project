@@ -7,11 +7,15 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Facilities | Mahallah Salahuddin</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Facilities | Mahallah Salahuddin</title>
 
     <link rel="stylesheet" href="/style.css">
     <link rel="stylesheet" href="facilities3.html">
     <link rel="stylesheet" href="/template/subnav.css">
     <script src="/Form/overlayForm.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 
 
     <style>
@@ -72,6 +76,40 @@
             margin-top: 19px;
         }
 
+        .section {
+            height: 400px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            max-width: 90%;
+            margin: auto;
+            background-color: #239776;
+        }
+
+        .sectiontwo {
+            height: 400px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            max-width: 90%;
+            margin: auto;
+            margin-bottom: 15vh;
+            background-color: #75bea8;
+        }
+
+
+
+        .paras {
+            padding: 0px 65px;
+        }
+
+        .thumbnail img {
+            width: 250px;
+            border: 2px solid #568a6e;
+            border-radius: 26px;
+            margin-top: 19px;
+        }
+
 
         .text-footer {
             text-align: center;
@@ -82,14 +120,14 @@
             color: #568a6e;
         }
     </style>
-
 </head>
 
 
 <body>
+
     <div id="form-container"></div>
-    <button onclick="overlayForm()" id="report-form" title="Maintenance Report">
-        <span>Maintenance<br> Report</span>
+    <button onclick="overlayForm()" id="report-form" title="Maintenance Report" aria-label="Maintenance Report">
+        <i class="fa fa-file-text fa-lg"></i>
     </button>
 
     <div class="topnav">
@@ -119,22 +157,17 @@
         </ul>
     </div>
 
-    </section>
-
     <section class="section">
         <div class="paras">
-            <h1 class="sectionTag text-big">Security</h1>
+            <h1 class="sectionTag text-big"><img src="security-camera.png" width="30px" height="30px">Security</h1>
 
-            <p class="sectionSubTag text-small">Closed-circuit television (CCTV) systems play a crucial role in
-                maintaining security within student residences. Strategically placed cameras help monitor common areas,
-                entrances, and exits, providing real-time surveillance and recording any suspicious activities. CCTV
-                systems serve as deterrents and are indispensable in addressing security concerns within the premises.
-
-                Many student residences employ security personnel, either stationed at the main entrance or patrolling
-                the facility round the clock. Trained security guards help maintain order, handle emergencies, and
-                respond promptly to any security threats or concerns. Their presence instills a sense of safety among
-                the residents and acts as a reassuring measure for students and parents alike.
-            </p>
+            <p class="sectionSubTag text-small"><img src="location.png" width="20px" height="20px">television (CCTV)
+                systems play a crucial role in maintaining security within student residences.</p>
+            <p class="sectionSubTag text-small"><img src="location.png" width="20px" height="20px">Strategically placed
+                cameras help monitor common areas, entrances, and exits, providing real-time surveillance and recording
+                any suspicious activities</p>
+            <p class="sectionSubTag text-small"><img src="location.png" width="20px" height="20px">CCTV systems serve as
+                deterrents and are indispensable in addressing security concerns within the premises.</p>
 
         </div>
         </div>
@@ -148,29 +181,22 @@
     <section class="sectiontwo">
         <div class="paras">
 
-            <h1 class="sectionTag text-big">Internet</h1>
-            <p class="sectionSubTag text-small">
-                First and foremost, students living in on-campus residences can benefit from a dedicated internet
-                connection specifically designed to meet their academic needs. These connections are often provided by
-                the university or college, ensuring that students have access to uninterrupted internet service
-                throughout their stay. This provision helps students to complete their assignments, conduct research,
-                participate in virtual classes, and engage with academic resources conveniently from the comfort of
-                their own rooms.
+            <h1 class="sectionTag text-big"><img src="wi-fi.png" width="30px" height="30px">Internet</h1>
+            <p class="sectionSubTag text-small"><img src="location.png" width="20px" height="20px">Students living in
+                on-campus residences can benefit from a dedicated internet connection specifically designed to meet
+                their academic needs, The internet facilities in students' residences are regularly monitored and
+                maintained by IT professionals. </p>
+            <p class="sectionSubTag"><img src="location.png" width="20px" height="20px">Connections are often provided
+                by the university or college, ensuring that students have access to uninterrupted internet service
+                throughout their stay.</p>
+            <p><img src="location.png" width="20px" height="20px">Students' residences often provide Wi-Fi connectivity,
+                extending the reach of the internet throughout the entire building. This enables students to connect
+                their laptops, smartphones, and other devices to the network without the need for wired connections</p>
 
-                Students' residences often provide Wi-Fi connectivity, extending the reach of the internet throughout
-                the entire building. This enables students to connect their laptops, smartphones, and other devices to
-                the network without the need for wired connections. Access to Wi-Fi grants students the flexibility to
-                study, research, and collaborate from any location within the residence hall, fostering a dynamic and
-                interactive learning environment.
-
-                The internet facilities in students' residences are regularly monitored and maintained by IT
-                professionals. This ensures that any technical issues or connectivity problems are promptly addressed,
-                minimizing disruptions to students' academic activities. Students can rely on a dedicated support team
-                to troubleshoot and resolve any internet-related concerns, guaranteeing a smooth online experience.
-
-            </p>
 
         </div>
+
+
 
         </div>
 
@@ -180,14 +206,32 @@
         </div>
     </section>
 
-    <footer class="background">
-        <p class="text-footer">
-            @Salahuddin
-        </p>
 
-    </footer>
+    <div class="footer">
+        <div class="social">
+            <a href="https://www.facebook.com/mrc.msa" class="anchor"><span class="fa-stack fa-lg"><i
+                        class="fa fa-facebook fa-stack-1x"></i>
+                    <i class="fa fa-circle-thin fa-stack-2x"></i></a>
+            <a href="https://twitter.com/iium_msa" class="anchor"><span class="fa-stack fa-lg"><i
+                        class="fa fa-twitter"></i><i class="fa fa-circle-thin fa-stack-2x"></i></span></a>
+            <a href="https://www.youtube.com/channel/UClJOGgnZezELoxiuB4sGSCg/videos" class="anchor"><span
+                    class="fa-stack fa-lg"><i class="fa fa-youtube"></i><i
+                        class="fa fa-circle-thin fa-stack-2x"></i></span></a>
+        </div>
+        <ul class="list-inline">
+            <li class="list-inline-item"><a href="/index.html">Home</a></li>
+            <li class="list-inline-item"><a href="/News/whatsnew/news.html">News</a></li>
+            <li class="list-inline-item"><a href="/Facilities/facilities1.html">Facilities</a></li>
+            <li class="list-inline-item"><a href="/Maps/maps.html">Maps</a></li>
+            <li class="list-inline-item"><a href="/Contact/contact.html">Contacts</a></li>
+            <li class="list-inline-item"><a href="About/about.html">About</a></li>
+
+        </ul>
+        <p class="copyright">Mahallah Salahuddin Al Ayubi © 2024</p>
+    </div>
 
     <script src="/darkmode.js"></script>
+
 
 </body>
 

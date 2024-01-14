@@ -11,20 +11,19 @@
     <link rel="stylesheet" href="/template/subnav.css">
     <link rel="stylesheet" href="ImportantThing.css">
     <script src="/Form/overlayForm.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 </head>
 
 <body>
     <div id="form-container"></div>
-    <button onclick="overlayForm()" id="report-form" title="Maintenance Report">
-        <span>
-            Maintenance<br>Report
-        </span>
+    <button onclick="overlayForm()" id="report-form" title="Maintenance Report" aria-label="Maintenance Report">
+        <i class="fa fa-file-text fa-lg"></i>
     </button>
     <div class="topnav">
         <img id="logo" src="/asset/logo-salahuddin.png" alt="logo" width="60" height="60">
         <ul>
             <!--Put class="active" according to your working directory and also link to other pages <../(page)>-->
-            <li><a href="/home.html">Home</a></li>
+            <li><a href="/index.html">Home</a></li>
             <li><a href="/News/whatsnew/news.html">News</a></li>
             <li><a href="/Facilities/facilities1.html">Facilities</a></li>
             <li><a href="/Maps/maps.html">Maps</a></li>
@@ -39,43 +38,71 @@
     <div class="subtopnav">
         <ul class="navcontent">
             <li><a href="/About/about.html">Principal's Message</a></li>
-            <li><a href="/About/ImportantThings.html" class="active"><span>Things To Know</span> </a></li>
+            <li><a href="/About/ImportantThings.html" class="active"><span>Important Things To Know</span> </a></li>
             <li><a href="MissionAndVission.html"><span>Mission And Vission </span></a></li>
         </ul>
     </div>
     <div class="card">
         <input id="ch" type="checkbox">
-        <p>
-            <strong> Check in & Check out Room</strong><br>
-            -Compulsory to check in at the beginning of semester and check out at the end of semester<br>
-            -Vacate & clean the room and surrender the room key at the end of every semester.
-            Live In During Vacation (LIDV)<br>
-            -Application for group/official LIDV is to be submitted to RSD/mahallah office within the stated date.<br>
-            -LIDV for personal reason and late request of LIDV is consider as rental.<br>
-            -Students who failed to apply LIDV and vacate the room and surrender the room key at the end of semester
-            will be given compound and will be charge for LIDV.
-            Vacation Notice (Available in I-Maalum, Fb & RSD Website)<br>
-        </p>
+        <strong>Check in & Check out Room</strong>
+        <ul class="itlist">
+            <li>
+                <div>Compulsory to check in at the beginning of semester and check out at the end of semester</div>
+            </li>
+            <li>
+                <div>Vacate & clean the room and surrender the room key at the end of every semester</div>
+            </li>
+        </ul><br>
+        <strong>Live In During Vacation (LIDV)</strong>
+        <ul class="itlist">
+            <li>
+                <div>Application for group/official LIDV is to be submitted to RSD/mahallah office within the stated
+                    date</div>
+            </li>
+            <li>
+                <div>LIDV for personal reason and late request of LIDV is consider as rental</div>
+            </li>
+            <li>
+                <div>Students who failed to apply LIDV and vacate the room and surrender the room key at the end of
+                    semester will be given compound and will be charge for LIDV</div>
+            </li>
+            <li>
+                <div>Vacation notice is available in I-Maalum, Fb & RSD Website</div>
+            </li>
+        </ul>
         <div class="content">
-            <p>
-                <strong>Mahallah Online Room Registration (MORR)</strong><br>
-                -All students who will register for the coming semester are required to do MORR at the stated date in
-                vacation notice.(2 weeks before final exam)<br>
-                -Failed to do MORR may cause student to have no room for next semester and students have to vacate their
-                room and surrender the room key.<br>
-                -Student who is not eligible to do MORR due to:<br>
-                no registered subject, outstanding fees, double degree, exceed 4 years, practical training & FYP
-                -Need to fill in details in google form (bit.ly/morr_sem1 or scan QR code)<br>
-                <strong>HOW TO GET ROOM FOR NEXT SEM</strong><br>
-                Mahallah Online Room Registration (MORR) – (Available in I-Maalum, FB & RSD Website)<br>
-                Live Off Campus (LOC)<br>
-                Students who wish/have to stay off campus : May register yourself at Mahallah Office.<br>
-                Mahallah Online Maintenance Report<br>
-                https://bit.do/mahallahmaintenance
-            </p>
-            <label for="ch" class="ch">Show less</label>
+            <br>
+            <strong>Mahallah Online Room Registration (MORR)</strong>
+            <ul class="itlist">
+                <li>
+                    <div>All students who will register for the coming semester are required to do MORR at the stated
+                        date in vacation notice.(2 weeks before final exam)</div>
+                </li>
+                <li>
+                    <div>Failed to do MORR may cause student to have no room for next semester and students have to
+                        vacate their room and surrender the room key.</div>
+                </li>
+                <li>
+                    <div>Student who is not eligible to do MORR due to: no registered subject, outstanding fees, double
+                        degree, exceed 4 years, practical training & FYP -Need to fill in details in google form
+                        (bit.ly/morr_sem1 or scan QR code)</div>
+                </li>
+            </ul><br>
+            <strong>HOW TO GET ROOM FOR NEXT SEM</strong>
+            <ul class="itlist">
+                <li>
+                    <div>Mahallah Online Room Registration (MORR) – (Available in I-Maalum, FB & RSD Website)</div>
+                </li>
+                <li>
+                    <div>Live Off Campus (LOC)</div>
+                </li>
+                <li>
+                    <div>Students who wish/have to stay off campus : May register yourself at Mahallah Office.</div>
+                </li>
+            </ul>
+            <label for="ch" id="showLess" class="ch">Show less</label>
         </div>
-        <label for="ch" class="ch">Show more</label>
+        <label for="ch" id="showMore" class="ch">Show more</label>
     </div>
 
 
@@ -91,6 +118,28 @@
             <div class="text"><strong>Do’s & Don’ts</strong></div>
             <img src="Picture2.jpg" alt="Image 2">
         </div>
+    </div>
+    <div class="footer">
+        <div class="social">
+            <a href="https://www.facebook.com/mrc.msa" class="anchor"><span class="fa-stack fa-lg"><i
+                        class="fa fa-facebook fa-stack-1x"></i>
+                    <i class="fa fa-circle-thin fa-stack-2x"></i></a>
+            <a href="https://twitter.com/iium_msa" class="anchor"><span class="fa-stack fa-lg"><i
+                        class="fa fa-twitter"></i><i class="fa fa-circle-thin fa-stack-2x"></i></span></a>
+            <a href="https://www.youtube.com/channel/UClJOGgnZezELoxiuB4sGSCg/videos" class="anchor"><span
+                    class="fa-stack fa-lg"><i class="fa fa-youtube"></i><i
+                        class="fa fa-circle-thin fa-stack-2x"></i></span></a>
+        </div>
+        <ul class="list-inline">
+            <li class="list-inline-item"><a href="/index.html">Home</a></li>
+            <li class="list-inline-item"><a href="/News/whatsnew/news.html">News</a></li>
+            <li class="list-inline-item"><a href="/Facilities/facilities1.html">Facilities</a></li>
+            <li class="list-inline-item"><a href="/Maps/maps.html">Maps</a></li>
+            <li class="list-inline-item"><a href="/Contact/contact.html">Contacts</a></li>
+            <li class="list-inline-item"><a href="About/about.html">About</a></li>
+
+        </ul>
+        <p class="copyright">Mahallah Salahuddin Al Ayubi © 2024</p>
     </div>
     <script src="/darkmode.js"></script>
 

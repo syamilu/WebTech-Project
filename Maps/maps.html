@@ -8,15 +8,18 @@
     <!-- (Page) | Mahallah Salahuddin-->
     <title>Mahallah Salahuddin</title>
     <link rel="stylesheet" href="/style.css" />
+    <link rel="stylesheet" href="/Maps/mapstyle.css" />
     <script src="/Form/overlayForm.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <script src="/Form/overlayForm.js">
+    </script>
+
 </head>
 
 <body>
     <div id="form-container"></div>
-    <button onclick="overlayForm()" id="report-form" title="Maintenance Report">
-        <span>
-            Maintenance<br>Report
-        </span>
+    <button onclick="overlayForm()" id="report-form" title="Maintenance Report" aria-label="Maintenance Report">
+        <i class="fa fa-file-text fa-lg"></i>
     </button>
     <div class="topnav">
         <img id="logo" src="/asset/logo-salahuddin.png" alt="logo" width="60" height="60">
@@ -36,12 +39,36 @@
     </div>
     <div class="content">
         <!--Refer Figma for the welcome texts according to your pages-->
-        <h4>Assalamualaikum w.b.t, Welcome to Mahallah Salahuddin</h4>
-        <iframe
+        <h4>"˹He is the One˺ Who has laid out the earth for ˹all of˺ you, and set in it pathways for you, and sends down
+            rain from the sky, causing various types of plants to grow" (20:53)</h4>
+        <iframe id="map"
             src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3493.6465370369074!2d101.73807951188952!3d3.256590171674144!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x31cc38c5049b50b1%3A0x2fa51a46b8f14aab!2sMahallah%20Salahuddin%20al-Ayyubi!5e0!3m2!1sen!2smy!4v1698908291483!5m2!1sen!2smy"
-            width="800" height="600" style="border:0;" allowfullscreen="" loading="lazy" scrollwheel="true"
-            allow="zoom; fullscreen" width="800" height="600" referrerpolicy="no-referrer-when-downgrade">
+            style="border:0;" allowfullscreen="" loading="lazy" scrollwheel="true" allow="zoom; fullscreen"
+            referrerpolicy="no-referrer-when-downgrade">
         </iframe>
+    </div>
+    <div class="footer">
+        <footer>
+            <div class="social">
+                <a href="https://www.facebook.com/mrc.msa" class="anchor"><span class="fa-stack fa-lg"><i
+                            class="fa fa-facebook fa-stack-1x"></i>
+                        <i class="fa fa-circle-thin fa-stack-2x"></i></a>
+                <a href="https://twitter.com/iium_msa" class="anchor"><span class="fa-stack fa-lg"><i
+                            class="fa fa-twitter"></i><i class="fa fa-circle-thin fa-stack-2x"></i></span></a>
+                <a href="https://www.youtube.com/channel/UClJOGgnZezELoxiuB4sGSCg/videos" class="anchor"><span
+                        class="fa-stack fa-lg"><i class="fa fa-youtube"></i><i
+                            class="fa fa-circle-thin fa-stack-2x"></i></span></a>
+            </div>
+            <ul class="list-inline">
+                <li class="list-inline-item"><a href="/index.html">Home</a></li>
+                <li class="list-inline-item"><a href="/News/whatsnew/news.html">News</a></li>
+                <li class="list-inline-item"><a href="/Facilities/facilities1.html">Facilities</a></li>
+                <li class="list-inline-item"><a href="/Maps/maps.html">Maps</a></li>
+                <li class="list-inline-item"><a href="/Contact/contact.html">Contacts</a></li>
+                <li class="list-inline-item"><a href="About/about.html">About</a></li>
+
+            </ul>
+            <p class="copyright">Mahallah Salahuddin Al Ayubi © 2024</p>
     </div>
 
     <script src="/darkmode.js"></script>

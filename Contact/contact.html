@@ -4,6 +4,35 @@
 <html lang="en">
 
 <head>
+  <!-- Add the emailjs SDK -->
+  <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"></script>
+
+  <!-- Initialize emailjs with your public key -->
+  <script type="text/javascript">
+    (function () {
+      emailjs.init('YOUR_PUBLIC_KEY');
+    })();
+  </script>
+
+  <!-- Handle form submit -->
+  <script type="text/javascript">
+    window.onload = function () {
+      document.getElementById('contact-form').addEventListener('submit', function (event) {
+        event.preventDefault();
+
+        // Generate contact number
+        this.contact_number.value = Math.random() * 100000 | 0;
+
+        // Send form with emailjs
+        emailjs.sendForm('contact_service', 'contact_form', this)
+          .then(function () {
+            console.log('SUCCESS!');
+          }, function (error) {
+            console.log('FAILED...', error);
+          });
+      });
+    }
+  </script>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Contact Us - Mahallah Salahuddin</title>
@@ -11,15 +40,15 @@
     rel="stylesheet" />
   <link rel="stylesheet" href="/style.css">
   <link rel="stylesheet" href="styleSheet.css">
-  <link rel="javascript" href="contact.js">
+  <script src="contact.js"></script>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  <script src="/Form/overlayForm.js"></script>
 </head>
 
 <body>
   <div id="form-container"></div>
-  <button onclick="overlayForm()" id="report-form" title="Maintenance Report">
-    <span>
-      Maintenance<br>Report
-    </span>
+  <button onclick="overlayForm()" id="report-form" title="Maintenance Report" aria-label="Maintenance Report">
+    <i class="fa fa-file-text fa-lg"></i>
   </button>
 
   <div class="topnav">
@@ -44,58 +73,77 @@
 
   <div class="content">
     <!-- Contact Us page content goes here -->
-    <h2>Contact Information</h2>
-    <p>Mahallah Office (MO) – 03 6421 5981/5982/5983</p>
-    <p><strong>Email</strong> </p>
-    <p>Mahallah Principal</p>
+    <h1 class="contact-title">Contact Information</h1>
+    <p><strong>Phone/Fax :</strong> </p>
+    <p>Mahallah Office (MO) – 03 6421 5981/5982/5983</p><br>
+    <p><strong>Email :-</strong> </p>
+    <p>Mahallah Principal :</p>
     <p> Dr. Noor Hasrul Nizan Bin Mohammad Noor : nhasrul@iium.edu.my</p>
-    <p> Assistant Hostel Manager</p>
-    <p> Puan Roslaily Bt. Hashim : roslaily@iium.edu.my</p>
-    <p> <strong>EMERGENCY CONTACT NUMBER</strong></p>
-    <p>DAYA BERSIH SDN BHD (DBSB) 03-6421 5415</p>
-    <p> OFFICE OF SECURITY MANAGEMENT (OSeM) 03-6421 5555 (24 hours)</p>
-    <p> IUM HEALTH AND WELNESS CENTRE (IHWC) 03-6421 4444 (24 hours)</p>
-
-
-    <p><strong>ADRESS:</strong></p>
-    <p>MAHALLAH SALAHUDDIN AL-AYUBBI
-      IIUM JALAN GOMBAK
-      53100 KUALA LUMPUR
+    <p> Assistant Hostel Manager :</p>
+    <p> Puan Roslaily Bt. Hashim : roslaily@iium.edu.my</p><br>
+    <p> <strong>Emergency Contact Number : </strong></p>
+    <p>Daya Bersih SDN BHD (DBSB) 03-6421 5415</p>
+    <p> Office of Security Management (OSeM) 03-6421 5555 (24 hours)</p>
+    <p> IIUM Health and Wellness Centre (IHWC) 03-6421 4444 (24 hours)</p>
+    <br>
+    <p><strong>Address :</strong></p>
+    <p>Mahallah Salahuddin Al-Ayubbi,<br>
+      International Islamic University Malaysia,<br> Gombak,
+      53100, Kuala Lumpur.
     </p>
 
+    <br>
 
+    <h3 class="contact-title">Send us a Message</h3>
 
-    <h3>Send us a Message</h3>
     <form class="contact-form">
-      <input type="text" placeholder="Name">
-      <input type="email" placeholder="Email">
-      <textarea placeholder="Message"></textarea>
+
+      <input type="text" placeholder="Name" name="user_name">
+      <input type="email" placeholder="Email" name="user_email">
+      <textarea placeholder="Message" name="message"></textarea>
       <button type="submit">Submit</button>
     </form>
+
   </div>
 
+  <div class="footer">
+    <div class="social">
+      <a href="https://www.facebook.com/mrc.msa" class="anchor"><span class="fa-stack fa-lg"><i
+            class="fa fa-facebook fa-stack-1x"></i>
+          <i class="fa fa-circle-thin fa-stack-2x"></i></a>
+      <a href="https://twitter.com/iium_msa" class="anchor"><span class="fa-stack fa-lg"><i class="fa fa-twitter"></i><i
+            class="fa fa-circle-thin fa-stack-2x"></i></span></a>
+      <a href="https://www.youtube.com/channel/UClJOGgnZezELoxiuB4sGSCg/videos" class="anchor"><span
+          class="fa-stack fa-lg"><i class="fa fa-youtube"></i><i class="fa fa-circle-thin fa-stack-2x"></i></span></a>
+    </div>
+    <ul class="list-inline">
+      <li class="list-inline-item"><a href="/index.html">Home</a></li>
+      <li class="list-inline-item"><a href="/News/whatsnew/news.html">News</a></li>
+      <li class="list-inline-item"><a href="/Facilities/facilities1.html">Facilities</a></li>
+      <li class="list-inline-item"><a href="/Maps/maps.html">Maps</a></li>
+      <li class="list-inline-item"><a href="/Contact/contact.html">Contacts</a></li>
+      <li class="list-inline-item"><a href="About/about.html">About</a></li>
 
-
-
-
-
-  <div class="social-media">
-    <h3>Follow Us</h3>
-
-    <a href="https://www.facebook.com/mrc.msa">
-      <img src="f.png" alt="Facebook">
-    </a>
-
-
-    <a href="https://twitter.com/iium_msa">
-      <img src="t.png" alt="Twitter">
-    </a>
-
-    <a href="https://www.youtube.com/channel/UClJOGgnZezELoxiuB4sGSCg/videos">
-      <img src="y.png" alt="YouTube">
-    </a>
+    </ul>
+    <p class="copyright">Mahallah Salahuddin Al Ayubi © 2024</p>
   </div>
   <script src="/darkmode.js"></script>
 </body>
+
+<script>
+  document.querySelector('.contact-form').addEventListener('submit', function (event) {
+    event.preventDefault();
+
+    let formData = new FormData(this);
+
+    fetch('/send-email', {
+      method: 'POST',
+      body: formData
+    })
+      .then(response => response.text())
+      .then(data => console.log(data))
+      .catch(error => console.log(error));
+  });
+</script>
 
 </html>

@@ -57,7 +57,9 @@ async function updateChat() {
                 chat.username === getCookie("username")
                   ? "chatbox-send"
                   : "chatbox-receive"
-              }">
+              } ${
+        document.body.classList.contains("dark-mode") ? "dark-mode" : ""
+      }">
                 <div class="${
                   chat.username === getCookie("username")
                     ? "chatbox-send-chat"

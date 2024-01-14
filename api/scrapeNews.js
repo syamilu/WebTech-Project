@@ -13,7 +13,7 @@ async function scrapeNews(url) {
 
   const allNews = root
     .querySelectorAll("article")
-    .slice(0, 9)
+    .slice(0, 12)
     .map((newItem) => {
       const title = newItem
         .querySelector(".entry-header a:not(.entry-meta a)")
