@@ -73,30 +73,28 @@
 
   <div class="content">
     <!-- Contact Us page content goes here -->
-    <h2>Contact Information</h2>
-    <p>Mahallah Office (MO) – 03 6421 5981/5982/5983</p>
-    <p><strong>Email</strong> </p>
-    <p>Mahallah Principal</p>
+    <h1 class="contact-title">Contact Information</h1>
+    <p><strong>Phone/Fax :</strong> </p>
+    <p>Mahallah Office (MO) – 03 6421 5981/5982/5983</p><br>
+    <p><strong>Email :-</strong> </p>
+    <p>Mahallah Principal :</p>
     <p> Dr. Noor Hasrul Nizan Bin Mohammad Noor : nhasrul@iium.edu.my</p>
-    <p> Assistant Hostel Manager</p>
-    <p> Puan Roslaily Bt. Hashim : roslaily@iium.edu.my</p>
-    <p> <strong>EMERGENCY CONTACT NUMBER</strong></p>
-    <p>DAYA BERSIH SDN BHD (DBSB) 03-6421 5415</p>
-    <p> OFFICE OF SECURITY MANAGEMENT (OSeM) 03-6421 5555 (24 hours)</p>
-    <p> IUM HEALTH AND WELNESS CENTRE (IHWC) 03-6421 4444 (24 hours)</p>
-
-
-    <p><strong>ADRESS:</strong></p>
-    <p>MAHALLAH SALAHUDDIN AL-AYUBBI
-      IIUM JALAN GOMBAK
-      53100 KUALA LUMPUR
+    <p> Assistant Hostel Manager :</p>
+    <p> Puan Roslaily Bt. Hashim : roslaily@iium.edu.my</p><br>
+    <p> <strong>Emergency Contact Number : </strong></p>
+    <p>Daya Bersih SDN BHD (DBSB) 03-6421 5415</p>
+    <p> Office of Security Management (OSeM) 03-6421 5555 (24 hours)</p>
+    <p> IIUM Health and Wellness Centre (IHWC) 03-6421 4444 (24 hours)</p>
+    <br>
+    <p><strong>Address :</strong></p>
+    <p>Mahallah Salahuddin Al-Ayubbi,<br>
+      International Islamic University Malaysia,<br> Gombak,
+      53100, Kuala Lumpur.
     </p>
 
+    <br>
 
-
-    <h3>Send us a Message</h3>
-
-
+    <h3 class="contact-title">Send us a Message</h3>
 
     <form class="contact-form">
 
@@ -105,12 +103,8 @@
       <textarea placeholder="Message" name="message"></textarea>
       <button type="submit">Submit</button>
     </form>
+
   </div>
-
-
-
-
-
 
   <div class="footer">
     <div class="social">
@@ -135,5 +129,21 @@
   </div>
   <script src="/darkmode.js"></script>
 </body>
+
+<script>
+  document.querySelector('.contact-form').addEventListener('submit', function (event) {
+    event.preventDefault();
+
+    let formData = new FormData(this);
+
+    fetch('/send-email', {
+      method: 'POST',
+      body: formData
+    })
+      .then(response => response.text())
+      .then(data => console.log(data))
+      .catch(error => console.log(error));
+  });
+</script>
 
 </html>
