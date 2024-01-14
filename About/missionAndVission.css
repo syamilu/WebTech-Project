@@ -29,6 +29,7 @@ margin-top: 30px;
   background-color: #2a5449;
   border-radius: 10px;
   box-shadow: 0 0 10px rgb(0, 0, 0);
+  margin-bottom: 25px;
 }
 
 #p2 {
@@ -60,7 +61,6 @@ margin-top: 30px;
 }
 
 .mnv-container {
-  margin-bottom: 50px;
   margin-top: 25px;
 }
 
