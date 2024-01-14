@@ -52,3 +52,39 @@ label.ch {
 
 .card label[for="ch"] .card #ch:checked ~ label[for="ch"] {
 }
+
+/* for list */
+.itlist {
+  width: auto;
+}
+.itlist li {
+  color: white;
+  list-style-type: disc;
+}
+
+.itlist li::before {
+  content: "•";
+  position: absolute;
+  left: -20px; /* Adjust this value as needed */
+  color: white;
+}
+
+.itlist li div {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+@media screen and (max-width: 800px) {
+  .gallery {
+    flex-direction: column;
+  }
+}
+
+@media screen and (max-width: 500px) {
+  .gallery img {
+    width: 70%; /* Adjust as needed */
+    height: auto; /* Maintain aspect ratio */
+  }
+}
