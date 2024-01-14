@@ -28,3 +28,7 @@
   .subtopnav .navcontent li a.active span {
     border-bottom-color: #dbede3;  /* Change this line */
   }
+
+  #chatbox-container{
+    margin-bottom: 10vw;
+  }
