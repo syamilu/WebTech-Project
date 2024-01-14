@@ -8,9 +8,13 @@
 --box-shadow: 0 2rem 3rem var(--color-light);
 }
 
+html{
+    min-height: 100vh;
+}
+
 body{
     margin: 0;
-    background-color: #568a6e;
+    background-color: var(--secondary-color);
     color: white;
     text-align: center;
     height: 1000px;
@@ -18,6 +22,7 @@ body{
     position: relative;
     overflow-x: hidden;
     max-width: 100%;
+    height: 100%;
 }
 
 h4{
@@ -26,19 +31,6 @@ h4{
 }
 
 /*Top navigation bar*/
-.topnav{
-    background-color: #043C2C;
-    color: #568a6e;
-    height: 70px;
-    overflow: auto;
-    box-shadow: var(--box-shadow);
-    display: flex;
-    transition: all 0.3s ease-in-out;
-}
-
-.topnav:hover{
-    box-shadow: none;
-}
 
 div.darkmode-toggle{
     display: inline-flex;
@@ -92,6 +84,20 @@ label.darkmode-toggle:active:after{
     width: 26px;
 }
 
+.topnav{
+    background-color: #043C2C;
+    color: var(--secondary-color);
+    height: 70px;
+    overflow:visible;
+    box-shadow: var(--box-shadow);
+    display: flex;
+    transition: all 0.3s ease-in-out;
+}
+
+.topnav:hover{
+    box-shadow: none;
+}
+
 ul{
 	width: max-content;
 	margin: auto;
@@ -102,23 +108,22 @@ ul li{
     display: inline-block;
     position: relative;
     line-height: 21px;
-    color: #568a6e;
+    color: var(--secondary-color);
     cursor: pointer;
 }
 
 ul li a{
     display: block;
-    padding: 8px 25px;
-    color: #568a6e;
+    padding: 8px 3vw;
+    color: var(--secondary-color);
     text-decoration: none;
     transition: transform 0.3s ease;
-    border-radius: 20px; /* Add this line */
+    border-radius: 20px;
 }
 
 ul li a:hover{
     color: #318351;
     transform: translateY(1px);
-    
 }
 
 #logo{
@@ -142,15 +147,12 @@ ul li a:hover{
     opacity: 0.8;
     color: white;
     margin: 0.5px;
+    display: inline-block; /* Add this line */
+    width: auto; /* Add this line */
+    padding: 10px 20px; /* Add this line */
+    text-align: center; /* Add this line */
 }
 
-.lang{
-    font-size: 8px;
-    color: #568a6e;
-    float: right;
-    text-align: center;
-    padding: 0px 2px;
-}
 /*End of top navigation bar*/
 
 #report-form {
@@ -214,6 +216,7 @@ body.dark-mode {
 
 #form-container {
     position: absolute;
+    inset: 0;
     justify-content: center;
     z-index: 3;
     align-items:center;
@@ -221,3 +224,59 @@ body.dark-mode {
     height: auto;
 
   }
+
+  iframe{
+    margin-bottom: 10vw;
+  }
+
+
+  .footer{
+    background-color: var(--primary-color);
+    padding: 10px;
+    margin-top: auto;
+    width: 100%;
+  }
+  
+  .social{
+    margin: 5px;
+  }
+  
+  a.anchor {
+    color: aliceblue;
+  }
+  
+  a.anchor:hover {
+    color: #9bc0ac;
+  }
+
+@media screen and (max-width: 870px) {
+    .topnav {
+        height: auto;
+        flex-direction: column; 
+        justify-content: center;
+        align-items: center;
+    }
+
+    ul {
+        width: 100%;
+        padding: 10px 0; 
+    }
+
+    ul li {
+        display: block;
+        width: 100%;
+        text-align: center;
+    }
+
+    ul li a {
+        padding: 12px 0; 
+    }
+
+    #logo {
+        margin: 10px auto;
+    }
+
+    .darkmode-toggle {
+        margin: 10px auto; 
+    }
+}

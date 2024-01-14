@@ -249,23 +249,6 @@ video{
   margin: 0 5px;
 }
 
-.footer{
-  background-color: var(--primary-color);
-  padding: 10px;
-}
-
-.social{
-  margin: 5px;
-}
-
-a.anchor {
-  color: aliceblue;
-}
-
-a.anchor:hover {
-  color: #9bc0ac;
-}
-
 @media (max-width: 1024px) {   
   .ub{
     display: grid;
