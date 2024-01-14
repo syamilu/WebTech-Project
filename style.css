@@ -188,7 +188,6 @@ ul li a:hover{
     box-shadow: 0 0 10px rgb(255, 255, 255, 0.5);
 }
 
-
 /* for dark mode */
 body.dark-mode {
     background-color: #003823;
