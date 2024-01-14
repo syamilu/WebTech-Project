@@ -56,27 +56,5 @@ margin-top: 30px;
 }
 
 .b {
-  color: white;
-}
-
-.mnv-container {
-  margin-bottom: 50px;
-  margin-top: 25px;
-}
-
-@media screen and (max-width: 1050px) {
-  #p1,
-  #p2 {
-    height: auto;
-    margin: auto 25px 25px 25px;
-  }
-}
-
-@media screen and (max-width: 1050px) {
-  #p1,
-  #p2 {
-    width: auto; /* Add this line */
-    height: auto;
-    margin: auto 25px 25px 25px;
-  }
+  color: black;
 }
