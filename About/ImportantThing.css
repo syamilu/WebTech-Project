@@ -1,62 +1,94 @@
-
-
-  .card{
-    max-width: 800px;
-    margin: 0 auto;
-    padding: 40px;
-
-  }
-  #ch{
-    display: none;
-
-
+.card {
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 40px;
 }
-  #ch:checked ~ .content{
-    display: block;
-  }
-.content{
-    display: none;
+li {
+  display: inline;
 }
 
+#ch {
+  display: none;
+}
+#ch:checked ~ .content {
+  display: block;
+}
+.content {
+  display: none;
+}
 
-  label.ch{
-display: inline-block;
-cursor:pointer;
-color: #080808;
-background-color: rgb(5, 99, 50);
-padding: 3px 13px;
-border-radius: 3px;
-margin-top: 12px;
-  }
+label.ch {
+  display: inline-block;
+  cursor: pointer;
+  color: white;
+  background-color: rgb(5, 99, 50);
+  padding: 3px 13px;
+  border-radius: 3px;
+  margin-top: 12px;
+}
 
+.gallery {
+  display: flex;
+  justify-content: center;
+}
 
+.gallery img {
+  flex: 0 0 auto;
+  width: 500px;
+  height: 400px;
+  object-fit: cover;
+  margin-right: 10px;
+}
 
+.card label {
+  display: inline-block;
+  width: 15%; /* Make both buttons 50% width */
+}
+
+.card #ch:checked ~ label[for="ch"] {
+  display: inline-block;
+  width: 15%;
+}
+
+/* .card label[for="ch"] .card #ch:checked ~ label[for="ch"] {
+} */
+
+#ch:checked ~ #showMore {
+  display: none;
+}
+
+/* for list */
+.itlist {
+  width: auto;
+}
+.itlist li {
+  color: white;
+  list-style-type: disc;
+}
+
+.itlist li::before {
+  content: "•";
+  position: absolute;
+  left: -20px; /* Adjust this value as needed */
+  color: white;
+}
+
+.itlist li div {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+@media screen and (max-width: 800px) {
   .gallery {
-    display: flex;
-  
-    justify-content: center;
+    flex-direction: column;
   }
-  
-  .gallery img {
-    flex: 0 0 auto;
-    width: 500px; 
-    height: 400px;
-    object-fit: cover;
-    margin-right: 10px;
-  }
-  
+}
 
-  .card label {
-    display: inline-block;
-    width: 15%; /* Make both buttons 50% width */
+@media screen and (max-width: 500px) {
+  .gallery img {
+    width: 70%; /* Adjust as needed */
+    height: auto; /* Maintain aspect ratio */
   }
-  
-  .card #ch:checked ~ label[for="ch"] {
-    display: inline-block;
-    width: 15%;
-  } 
-  
-  .card label[for="ch"] 
-  .card #ch:checked ~ label[for="ch"] {
-    
-  }
+}
