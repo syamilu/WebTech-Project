@@ -217,13 +217,11 @@ body.dark-mode {
 
 #form-container {
     position: absolute;
-    inset: 0;
     justify-content: center;
     z-index: 3;
     align-items:center;
     width: 100%;
     height: auto;
-
   }
 
   iframe{
