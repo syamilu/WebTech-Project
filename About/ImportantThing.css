@@ -50,9 +50,9 @@ label.ch {
   width: 15%;
 }
 
-.card label[for="ch"] .card #ch:checked ~ label[for="ch"] {
+#ch:checked ~ #showMore {
+  display: none;
 }
-
 /* for list */
 .itlist {
   width: auto;
