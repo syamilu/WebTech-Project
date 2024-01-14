@@ -41,14 +41,14 @@
   <link rel="stylesheet" href="/style.css">
   <link rel="stylesheet" href="styleSheet.css">
   <script src="contact.js"></script>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  <script src="/Form/overlayForm.js"></script>
 </head>
 
 <body>
   <div id="form-container"></div>
-  <button onclick="overlayForm()" id="report-form" title="Maintenance Report">
-    <span>
-      Maintenance<br>Report
-    </span>
+  <button onclick="overlayForm()" id="report-form" title="Maintenance Report" aria-label="Maintenance Report">
+    <i class="fa fa-file-text fa-lg"></i>
   </button>
 
   <div class="topnav">
@@ -96,8 +96,6 @@
 
     <h3 class="contact-title">Send us a Message</h3>
 
-
-
     <form class="contact-form">
 
       <input type="text" placeholder="Name" name="user_name">
@@ -108,21 +106,26 @@
 
   </div>
 
-  <div class="social-media">
-    <h3>Follow Us</h3>
+  <div class="footer">
+    <div class="social">
+      <a href="https://www.facebook.com/mrc.msa" class="anchor"><span class="fa-stack fa-lg"><i
+            class="fa fa-facebook fa-stack-1x"></i>
+          <i class="fa fa-circle-thin fa-stack-2x"></i></a>
+      <a href="https://twitter.com/iium_msa" class="anchor"><span class="fa-stack fa-lg"><i class="fa fa-twitter"></i><i
+            class="fa fa-circle-thin fa-stack-2x"></i></span></a>
+      <a href="https://www.youtube.com/channel/UClJOGgnZezELoxiuB4sGSCg/videos" class="anchor"><span
+          class="fa-stack fa-lg"><i class="fa fa-youtube"></i><i class="fa fa-circle-thin fa-stack-2x"></i></span></a>
+    </div>
+    <ul class="list-inline">
+      <li class="list-inline-item"><a href="/index.html">Home</a></li>
+      <li class="list-inline-item"><a href="/News/whatsnew/news.html">News</a></li>
+      <li class="list-inline-item"><a href="/Facilities/facilities1.html">Facilities</a></li>
+      <li class="list-inline-item"><a href="/Maps/maps.html">Maps</a></li>
+      <li class="list-inline-item"><a href="/Contact/contact.html">Contacts</a></li>
+      <li class="list-inline-item"><a href="About/about.html">About</a></li>
 
-    <a href="https://www.facebook.com/mrc.msa">
-      <img src="f.png" alt="Facebook">
-    </a>
-
-
-    <a href="https://twitter.com/iium_msa">
-      <img src="t.png" alt="Twitter">
-    </a>
-
-    <a href="https://www.youtube.com/channel/UClJOGgnZezELoxiuB4sGSCg/videos">
-      <img src="y.png" alt="YouTube">
-    </a>
+    </ul>
+    <p class="copyright">Mahallah Salahuddin Al Ayubi © 2024</p>
   </div>
   <script src="/darkmode.js"></script>
 </body>
