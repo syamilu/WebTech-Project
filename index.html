@@ -10,15 +10,19 @@
     <link rel="stylesheet" href="Form/formsCSS.css" />
     <script src="Form/overlayForm.js"></script>
     <link rel="icon" type="image/x-icon" href="/favicon.ico">
-
+    <link rel="stylesheet" href="/indexCSS.css">
+    <link rel="stylesheet" href="//code.jquery.com/ui/1.13.2/themes/South-Street/jquery-ui.css">
+    <link rel="stylesheet" href="/resources/demos/style.css">
+    <script src="https://code.jquery.com/jquery-3.6.0.js"></script>
+    <script src="https://code.jquery.com/ui/1.13.2/jquery-ui.js"></script>
+    <script src="/slider.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 </head>
 
 <body>
     <div id="form-container"></div>
-    <button onclick="overlayForm()" id="report-form" title="Maintenance Report">
-        <span>
-            Maintenance<br>Report
-        </span>
+    <button onclick="overlayForm()" id="report-form" title="Maintenance Report" aria-label="Maintenance Report">
+        <i class="fa fa-file-text fa-lg"></i>
     </button>
 
     <div class="topnav">
@@ -42,10 +46,169 @@
     <!-- Page content -->
 
     <div class="content">
-        <h4>Welcome to Mahallah Salahuddin</h4>
+        <h4>Welcome to Mahallah Salahuddin Al Ayubi</h4>
     </div>
 
+    <div class="image-headline">
+        <div class="overlay-text">
+            <h1>Land of Warrior</h1>
+        </div>
+    </div>
+    <h2>Facilities</h2>
+    <div class="facilities-index">
+        <div class="flip-card">
+            <div class="flip-card-inner">
+                <div class="flip-card-front">
+                    <i class="fa fa-bed fa-4x"></i>
+                </div>
+                <div class="flip-card-back">
+                    <h1>Accommodation</h1>
+                    <p class="faci-desc">Our Mahallah offers spacious and neat quad-sharing rooms for the students
+                        that
+                        provides basic
+                        furnishing and a comfortable environment for the students.</p>
+                </div>
+            </div>
+        </div>
+        <div class="flip-card">
+            <div class="flip-card-inner">
+                <div class="flip-card-front">
+                    <i class="fa fa-wifi fa-4x"></i>
+                </div>
+                <div class="flip-card-back">
+                    <h1>Amenities</h1>
+                    <p class="faci-desc">The Mahallah boasts a range of amenities such as cafeteria, laundry
+                        facility
+                        and wifi service to
+                        ensure efficient and convenient daily living for everyone. </p>
+                </div>
+            </div>
+        </div>
+        <div class="flip-card">
+            <div class="flip-card-inner">
+                <div class="flip-card-front">
+                    <i class="fa fa-futbol-o fa-4x"></i>
+                </div>
+                <div class="flip-card-back">
+                    <h1>Sports</h1>
+                    <p class="faci-desc">To promote a healthy and active lifestyle amongst students, our Mahallah
+                        provides sports
+                        facilities such as volleyball and takraw court.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="panel">
+        <div class="figures-container">
+            <div class="figure"> <strong>1</strong> Central Facilities </div>
+            <div class="figure"> <strong>9</strong> Blocks </div>
+            <div class="figure"> <strong>256</strong> Quad Rooms </div>
+        </div>
+    </div>
+    <button class="facilitiesBtn" onclick="window.location.href='./Facilities/facilities1.html'">More about
+        facilities</button>
 
+
+    <div class="ub-index">
+        <h2>Uniform Bodies</h2>
+        <div class="ub">
+
+            <video width="640" height="480" autoplay muted loop>
+                <source src="asset/UB-parade-vid - Made with Clipchamp (1).mp4" type="video/mp4">
+            </video>
+            <div id="tabs">
+                <ul>
+                    <li><a href="#tabs-1">Army</a></li>
+                    <li><a href="#tabs-2">Air Force</a></li>
+                    <li><a href="#tabs-3">SUKSI</a></li>
+                    <li><a href="#tabs-4">SISPA</a></li>
+                </ul>
+                <div id="tabs-1">
+                    <p>Reserve Officer Training Unit (ROTU) Army</p>
+                    <p>The ROTU is a military programme that trains undergraduate students to be reserve officers
+                        for
+                        the Malaysian Armed Forces. Those who complete the training will be commissioned as officers
+                        in
+                        the Malaysian Armed Forces Reserve, either as Second lieutenants in the Territorial Army
+                        Regiment and the Royal Malaysian Air Force Volunteer Reserve, or as Acting Sub-lieutenants
+                        in
+                        the Royal Malaysian Navy Volunteer Reserve.</p>
+                </div>
+                <div id="tabs-2">
+                    <p>Reserve Officer Training Unit (ROTU) Airforce</p>
+                    <p>The Air Force ROTU training structure is comparable to
+                        that of the Army ROTU. They are trained as
+                        air force infantry in their first year. Marching, weapon training (combat rifle), map
+                        reading,
+                        air force etiquette and customs, and basic field military knowledge are all part of their
+                        training. The rank structure of the Air Force ROTU is comparable to that of the Army ROTU.
+                        The
+                        pattern of their rank epaulette is similar to that of the Army, except instead of green, the
+                        Air
+                        Force's is dark blue with yellow stripes.</p>
+                </div>
+                <div id="tabs-3">
+                    <p>Kor Sukarelawan Polis Siswa Siswi (SUKSIS)</p>
+                    <p>The club is part of the university's uniform bodies that provides opportunities for students
+                        to
+                        volunteer with the police force. The establishment of a "Police-style" uniformed body in all
+                        Public Higher Education Institutions (IPTA) aims to produce excellent graduates who possess
+                        legal knowledge, skills, competitiveness, discipline, proficiency, and are equipped with
+                        pure
+                        values and high self-esteem.</p>
+                </div>
+                <div id="tabs-4">
+                    <p>Kor Siswa- Siswi Pertahanan Awam (KOR SISPA)</p>
+                    <p>The establishment of a uniformed body course at the University as a co-curricular program
+                        aims to
+                        enhance soft skills among students. This uniformed team course can provide additional value
+                        to
+                        students in terms of soft skills, in addition to emphasizing academic excellence.
+                        Specifically,
+                        the skills that can be developed through the SISPA co-curricular program include teamwork
+                        spirit, cultivating self-values, and fostering a love for the homeland.</p>
+                </div>
+            </div>
+
+        </div>
+        <!--<div class="mrc">
+            <h2>Mahallah Representative Committee</h2>
+        </div>-->
+    </div>
+    <div class="inter-image"></div>
+    <div class="contacts">
+        <h2>Contact Us</h2>
+        <h3>Don't miss out on latest <a href="/News/whatsnew/news.html" class="anchor">news and events!</a></h3>
+        <div class="contact-container">
+            <a href="/News/community/community.html"><button class="contactBtn"><i class="fa fa-comments fa-lg"></i>
+                    Community Forum </button></a>
+            <button class="contactBtn" onclick="overlayForm()"><i class="fa fa-file-text"></i> Maintenance
+                Report</button>
+        </div>
+    </div>
+    <div class="footer">
+        <footer>
+            <div class="social">
+                <a href="https://www.facebook.com/mrc.msa" class="anchor"><span class="fa-stack fa-lg"><i
+                            class="fa fa-facebook fa-stack-1x"></i>
+                        <i class="fa fa-circle-thin fa-stack-2x"></i></a>
+                <a href="https://twitter.com/iium_msa" class="anchor"><span class="fa-stack fa-lg"><i
+                            class="fa fa-twitter"></i><i class="fa fa-circle-thin fa-stack-2x"></i></span></a>
+                <a href="https://www.youtube.com/channel/UClJOGgnZezELoxiuB4sGSCg/videos" class="anchor"><span
+                        class="fa-stack fa-lg"><i class="fa fa-youtube"></i><i
+                            class="fa fa-circle-thin fa-stack-2x"></i></span></a>
+            </div>
+            <ul class="list-inline">
+                <li class="list-inline-item"><a href="/index.html">Home</a></li>
+                <li class="list-inline-item"><a href="/News/whatsnew/news.html">News</a></li>
+                <li class="list-inline-item"><a href="/Facilities/facilities1.html">Facilities</a></li>
+                <li class="list-inline-item"><a href="/Maps/maps.html">Maps</a></li>
+                <li class="list-inline-item"><a href="/Contact/contact.html">Contacts</a></li>
+                <li class="list-inline-item"><a href="About/about.html">About</a></li>
+
+            </ul>
+            <p class="copyright">Mahallah Salahuddin Al Ayubi © 2024</p>
+    </div>
     <script src="/darkmode.js"></script>
 
 </body>

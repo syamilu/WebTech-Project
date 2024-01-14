@@ -21,7 +21,7 @@ margin-top: 30px;
 
 #p1, #p2 {
     width: 400px;
-    height: 300px; /* Added "px" to specify the unit for height */
+    height: 330px; /* Added "px" to specify the unit for height */
     overflow: auto;
     display: inline-block;
     vertical-align: top; /* Align the top of the blocks */
@@ -84,4 +84,7 @@ flex: 5;
 }
 .wrapper :hover img{
   transform: scale(1.2S);
+}*/
+.b{
+  color: black;
 }
