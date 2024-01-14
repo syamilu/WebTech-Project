@@ -1,34 +1,30 @@
 .subtopnav {
-    overflow: hidden;
-    background-color: #2b503c5c;
-    transition: all 0s ease-in-out;
-  }
-  
-  .subtopnav .navcontent li a{
-      text-align: center;
-      color: rgb(190, 188, 188);
-      transition: transform 0.3s ease-in-out;
-  }
-  
-  .subtopnav .navcontent li a:hover{
-      color:  #dbede3;
-      transform: translateY(0px);
-  }
-  
-  .subtopnav .navcontent li a.active{
-      color: #dbede3;
-  }
-  
-  .subtopnav .navcontent li a span {
-    display: inline-block;
-    border-bottom: 2px solid transparent;  /* Add this line */
-    padding-bottom: 3px;
-  }
-  
-  .subtopnav .navcontent li a.active span {
-    border-bottom-color: #dbede3;  /* Change this line */
-  }
+  overflow: hidden;
+  background-color: #2b503c5c;
+  transition: all 0s ease-in-out;
+}
 
-  #chatbox-container{
-    margin-bottom: 10vw;
-  }
+.subtopnav .navcontent li a {
+  text-align: center;
+  color: rgb(190, 188, 188);
+  transition: transform 0.3s ease-in-out;
+}
+
+.subtopnav .navcontent li a:hover {
+  color: #dbede3;
+  transform: translateY(0px);
+}
+
+.subtopnav .navcontent li a.active {
+  color: #dbede3;
+}
+
+.subtopnav .navcontent li a span {
+  display: inline-block;
+  border-bottom: 2px solid transparent; /* Add this line */
+  padding-bottom: 3px;
+}
+
+.subtopnav .navcontent li a.active span {
+  border-bottom-color: #dbede3; /* Change this line */
+}
