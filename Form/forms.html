@@ -7,7 +7,6 @@
     <title>Maintenance Report Form</title>
     <link rel="stylesheet" href="/Form/formsCSS.css">
     <script src="overlayForm.js"></script>
-    <script src="script.js"></script>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
     <!-- Google Fonts -->
     <link href="https://fonts.googleapis.com/css2?family=Rubik&display=swap" rel="stylesheet">
@@ -21,33 +20,33 @@
             <a href="javascript:void(0)" class="closebtn" onclick="overlayForm()">&times;</a>
             <div class="input-group">
                 <label for="name" class="text-input">Name : </label>
-                <input type="text" id="name" name="name">
+                <input type="text" id="name" name="name" required>
             </div>
             <div class="input-group">
                 <label for="matricno" class="text-input">Matric No :</label>
-                <input type="text" id="matricno" name="matricno"><br>
+                <input type="text" id="matricno" name="matricno" required><br>
             </div>
             <div class="input-group">
                 <label for="contact" class="text-input">Contact No :</label>
-                <input type="text" id="contact" name="contact"><br><br>
+                <input type="text" id="contact" name="contact" required><br><br>
             </div>
 
-            <div class="input-group">
+            <!-- <div class="input-group">
                 <label for="block" class="text-input">Block :</label>
                 <input type="text" id="block" name="block"><br>
-            </div>
+            </div> -->
             <div class="input-group">
-                <label for="room" class="text-input">Room :</label>
-                <input type="text" id="room" name="room"><br>
+                <label for="room" class="text-input">Room No.:</label>
+                <input type="text" id="room" name="room" required><br>
             </div>
-            <div class="input-group">
+            <!--<div class="input-group">
                 <label for="compartment" class="text-input">Compartment :</label>
                 <input type="text" id="compartment" name="compartment"><br><br>
-            </div>
+            </div>-->
 
             <div class="text-group">
                 <label for="issue" class="text-input">Issue Description :</label>
-                <textarea id="issue" name="issue" style="height:200px"></textarea><br>
+                <textarea id="issue" name="issue" required></textarea><br>
             </div>
 
             <div class="container">
@@ -61,6 +60,8 @@
             <button type="submit">SUBMIT</button>
         </fieldset>
     </form>
+
+    <div class="submission-message"></div>
     <script src="/Form/script.js"></script>
 </body>
 

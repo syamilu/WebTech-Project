@@ -16,4 +16,5 @@ function overlayForm() {
   var overlay = document.getElementById("form-container");
   overlay.style.display = overlay.style.display === "block" ? "none" : "block";
   overlay.style.backgroundColor = "rgba(0,0,0,0.5)";
+  overlay.style.inset = "0";
 }
