@@ -1,8 +1,7 @@
 # WebTech-Project
 Mahallah Salahuddin website project
 
-Development website :
-https://v2.salahuddin.syamilyusof.com
+This is group project for Web Technologies INFO 2302 with Mahallah theme.
 
 Production website :
 https://salahuddin.syamilyusof.com
